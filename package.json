@@ -1,6 +1,6 @@
 {
-  "name": "ember-lottie",
-  "version": "0.0.0",
+  "name": "@qonto/ember-lottie",
+  "version": "0.1.0",
   "description": "The default blueprint for ember-cli addons.",
   "keywords": [
     "ember-addon"
