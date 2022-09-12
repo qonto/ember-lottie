@@ -1,3 +1,6 @@
+![ember-lottie-illustration](https://user-images.githubusercontent.com/15218861/189691066-5fe5bb92-2451-4772-b3e6-978ac207bec2.svg)
+
+
 # ember-lottie
 
 [Short description of the addon.]
