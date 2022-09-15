@@ -1,1 +1,1 @@
-export { default } from 'ember-lottie/components/lottie';
+export { default } from '@qonto/ember-lottie/components/lottie';

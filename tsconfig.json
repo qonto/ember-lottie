@@ -73,16 +73,16 @@
         "tests/dummy/app/*",
         "app/*"
       ],
-      "ember-lottie": [
+      "@qonto/ember-lottie": [
         "addon"
       ],
-      "ember-lottie/*": [
+      "@qonto/ember-lottie/*": [
         "addon/*"
       ],
-      "ember-lottie/test-support": [
+      "@qonto/ember-lottie/test-support": [
         "addon-test-support"
       ],
-      "ember-lottie/test-support/*": [
+      "@qonto/ember-lottie/test-support/*": [
         "addon-test-support/*"
       ],
       "*": [
