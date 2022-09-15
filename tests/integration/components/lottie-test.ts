@@ -4,7 +4,7 @@ import { render, waitFor } from '@ember/test-helpers';
 import { hbs } from 'ember-cli-htmlbars';
 import type { TestContext as TestContextBase } from '@ember/test-helpers';
 
-import type { LottieArgs } from 'ember-lottie/components/lottie';
+import type { LottieArgs } from '@qonto/ember-lottie/components/lottie';
 
 interface TestContext extends TestContextBase {
   args: LottieArgs;
