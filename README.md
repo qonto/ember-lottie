@@ -4,6 +4,11 @@
 # ember-lottie
 
 ![CI](https://github.com/qonto/ember-lottie/workflows/CI/badge.svg)
+[![Latest NPM release][npm-badge]][npm-badge-url]
+
+[npm-badge]: https://img.shields.io/npm/v/@qonto/ember-lottie.svg
+[npm-badge-url]: https://www.npmjs.com/package/@qonto/ember-lottie
+
 
 Render [lottie](https://github.com/airbnb/lottie-web) after effects animations in [Ember.js](https://emberjs.com).
 
@@ -17,7 +22,7 @@ Render [lottie](https://github.com/airbnb/lottie-web) after effects animations i
 ## Installation
 
 ```
-ember install ember-lottie
+ember install @qonto/ember-lottie
 ```
 
 
