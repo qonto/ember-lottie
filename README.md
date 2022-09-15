@@ -22,7 +22,7 @@ Render [lottie](https://github.com/airbnb/lottie-web) after effects animations i
 ## Installation
 
 ```
-ember install ember-lottie
+ember install @qonto/ember-lottie
 ```
 
 
