@@ -130,6 +130,9 @@
     "github": {
       "release": true,
       "tokenRef": "GITHUB_AUTH"
+    },
+    "npm": {
+      "publish": false
     }
   }
 }
