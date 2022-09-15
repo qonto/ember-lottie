@@ -1,9 +1,12 @@
 {
   "name": "@qonto/ember-lottie",
   "version": "0.1.0",
-  "description": "The default blueprint for ember-cli addons.",
+  "description": "Render lottie after effects animations in Ember.js",
   "keywords": [
-    "ember-addon"
+    "ember-addon",
+    "after effects",
+    "animation",
+    "lottie"
   ],
   "repository": "",
   "license": "MIT",

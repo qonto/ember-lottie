@@ -3,8 +3,9 @@
 
 # ember-lottie
 
-[Short description of the addon.]
+![CI](https://github.com/qonto/ember-lottie/workflows/CI/badge.svg)
 
+Render [lottie](https://github.com/airbnb/lottie-web) after effects animations in [Ember.js](https://emberjs.com).
 
 ## Compatibility
 
@@ -22,7 +23,12 @@ ember install ember-lottie
 
 ## Usage
 
-[Longer description of how to use the addon in apps.]
+```hbs
+<Lottie
+  @path="/data.json"
+  @onDataReady={{this.args.onDataReady}}
+/>
+```
 
 
 ## Contributing
