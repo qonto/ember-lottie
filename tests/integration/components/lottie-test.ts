@@ -15,7 +15,9 @@ module('Integration | Component | lottie', function (hooks) {
 
   hooks.beforeEach(function (this: TestContext) {
     this.args = {
-      onDataReady: (): void => {},
+      onDataReady: (): void => {
+        /* noop */
+      },
     };
   });
 
