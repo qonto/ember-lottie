@@ -1,1 +1,5 @@
-<div ...attributes {{did-insert this.animate}}></div>
+<div
+  ...attributes
+  {{did-insert this.animate}}
+  data-test-autoplay={{if this.autoplay 'true' 'false'}}
+></div>

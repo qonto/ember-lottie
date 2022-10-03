@@ -3,6 +3,7 @@ import { action } from '@ember/object';
 import Ember from 'ember';
 
 import { AnimationItem, LottiePlayer } from 'lottie-web';
+import window from 'ember-window-mock';
 
 class NotFoundError extends Error {
   constructor() {
@@ -27,11 +28,16 @@ export interface LottieArgs {
 }
 
 export default class LottieComponent extends Component<LottieArgs> {
-  animation?: AnimationItem;
+  private animation?: AnimationItem;
+  private mediaQuery = window.matchMedia?.('(prefers-reduced-motion: reduce)');
 
-  async loadLottie(): Promise<LottiePlayer> {
-    const lottieModule = await import('lottie-web');
-    return lottieModule.default;
+  get autoplay() {
+    return this.canAutoplay ?? true;
+  }
+
+  get canAutoplay() {
+    const prefersReducedMotion = this.mediaQuery?.matches;
+    return !prefersReducedMotion && this.args.autoplay;
   }
 
   @action
@@ -66,7 +72,7 @@ export default class LottieComponent extends Component<LottieArgs> {
     this.animation = lottie.loadAnimation({
       name: this.args.name,
       loop: this.args.loop,
-      autoplay: this.args.autoplay,
+      autoplay: this.autoplay,
       animationData,
       container: document.querySelector(`#${this.args.containerId}`) || element,
       rendererSettings: {
@@ -76,13 +82,36 @@ export default class LottieComponent extends Component<LottieArgs> {
 
     const speed = Ember.testing ? 0 : this.args.speed || 1;
     this.animation.setSpeed(speed);
+
+    this.mediaQuery?.addEventListener(
+      'change',
+      this.handleReducedMotionPreferenceChange
+    );
   }
 
   willDestroy() {
     super.willDestroy();
 
+    this.mediaQuery?.removeEventListener(
+      'change',
+      this.handleReducedMotionPreferenceChange
+    );
+
     if (this.animation) {
       this.animation.destroy();
     }
+  }
+
+  @action
+  private handleReducedMotionPreferenceChange() {
+    const prefersReducedMotion = this.mediaQuery?.matches;
+    if (prefersReducedMotion) {
+      this.animation?.stop();
+    }
+  }
+
+  private async loadLottie(): Promise<LottiePlayer> {
+    const lottieModule = await import('lottie-web');
+    return lottieModule.default;
   }
 }
