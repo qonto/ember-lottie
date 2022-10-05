@@ -1,4 +1,14 @@
 
+
+## v0.2.0 (2022-10-05)
+
+#### :rocket: Enhancement
+* [#5](https://github.com/qonto/ember-lottie/pull/5) Modify autoplay default by taking into account prefers-reduced-motion ([@dannycalleri](https://github.com/dannycalleri))
+
+#### Committers: 1
+- Danny Calleri ([@dannycalleri](https://github.com/dannycalleri))
+
+
 ## v0.1.1 (2022-09-15)
 
 #### :bug: Bug Fix
