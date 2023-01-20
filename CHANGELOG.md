@@ -1,5 +1,18 @@
 
 
+
+## v0.3.0 (2023-01-20)
+
+#### :house: Internal
+* [#4](https://github.com/qonto/ember-lottie/pull/4) Create dependabot configuration ([@dbendaou](https://github.com/dbendaou))
+
+#### :rocket: Enhancement
+* [#5](https://github.com/qonto/ember-lottie/pull/21) MAdd ember test waiters waiter in animate function ([@clairekrucker](https://github.com/clairekrucker))
+
+#### Committers: 2
+- Djamel B. ([@dbendaou](https://github.com/dbendaou))
+- [@clairekrucker](https://github.com/clairekrucker)
+
 ## v0.2.0 (2022-10-05)
 
 #### :rocket: Enhancement
