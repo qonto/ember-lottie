@@ -1,6 +1,6 @@
 import { module, test } from 'qunit';
 import { setupRenderingTest } from 'ember-qunit';
-import { clearRender, find, render } from '@ember/test-helpers';
+import { clearRender, render, waitFor } from '@ember/test-helpers';
 import { hbs } from 'ember-cli-htmlbars';
 import type { TestContext as TestContextBase } from '@ember/test-helpers';
 
@@ -36,7 +36,8 @@ module('Integration | Component | lottie', function (hooks) {
       />
     `);
 
-    find('svg');
+    await waitFor('svg');
+
     assert.verifySteps(['data ready called']);
   });
 
@@ -56,7 +57,7 @@ module('Integration | Component | lottie', function (hooks) {
       />
     `);
 
-    find('svg');
+    await waitFor('svg');
     assert.verifySteps([`matchMedia((prefers-reduced-motion: reduce))`]);
   });
 
@@ -77,7 +78,7 @@ module('Integration | Component | lottie', function (hooks) {
       />
     `);
 
-    find('svg');
+    await waitFor('svg');
     assert.true(addEventListener.calledOnce);
 
     await clearRender();
@@ -104,7 +105,7 @@ module('Integration | Component | lottie', function (hooks) {
       />
     `);
 
-    find('svg');
+    await waitFor('svg');
     assert.dom('[data-test-autoplay=false]').exists();
   });
 
@@ -128,7 +129,7 @@ module('Integration | Component | lottie', function (hooks) {
       />
     `);
 
-    find('svg');
+    await waitFor('svg');
     assert.dom('[data-test-autoplay=false]').exists();
   });
 
@@ -152,7 +153,7 @@ module('Integration | Component | lottie', function (hooks) {
       />
     `);
 
-    find('svg');
+    await waitFor('svg');
     assert.dom('[data-test-autoplay=true]').exists();
   });
 
@@ -175,7 +176,7 @@ module('Integration | Component | lottie', function (hooks) {
       />
     `);
 
-    find('svg');
+    await waitFor('svg');
     assert.dom('[data-test-autoplay=true]').exists();
   });
 });

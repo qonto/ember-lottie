@@ -1,12 +1,9 @@
 import Component from '@glimmer/component';
 import { action } from '@ember/object';
 import Ember from 'ember';
-import { buildWaiter } from '@ember/test-waiters';
 
 import { AnimationItem, LottiePlayer } from 'lottie-web';
 import window from 'ember-window-mock';
-
-const waiter = buildWaiter('ember-lottie:lottie-waiter');
 
 class NotFoundError extends Error {
   constructor() {
@@ -45,7 +42,6 @@ export default class LottieComponent extends Component<LottieArgs> {
 
   @action
   async animate(element: HTMLElement): Promise<void> {
-    const token = waiter.beginAsync();
     const lottie = await this.loadLottie();
     let animationData;
 
@@ -68,8 +64,6 @@ export default class LottieComponent extends Component<LottieArgs> {
             'There was an issue fetching the animation file. Try again.'
           );
         }
-      } finally {
-        waiter.endAsync(token);
       }
     }
 
