@@ -59,14 +59,6 @@ export default class LottieComponent extends Component<LottieArgs> {
         } else {
           animationData = await response.json();
         }
-      } catch (error) {
-        if (error instanceof NotFoundError) {
-          throw error;
-        } else {
-          throw new Error(
-            'There was an issue fetching the animation file. Try again.'
-          );
-        }
       } finally {
         waiter.endAsync(token);
       }
