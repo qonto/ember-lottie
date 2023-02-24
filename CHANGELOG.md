@@ -1,3 +1,13 @@
+
+## v0.4.0 (2023-02-24)
+
+#### :house: Internal
+* [#30](https://github.com/qonto/ember-lottie/pull/30) Update lerna changelog plugin ([@herzzanu](https://github.com/herzzanu))
+
+#### Committers: 2
+- Danny Calleri ([@dannycalleri](https://github.com/dannycalleri))
+- Sabin Hertanu ([@herzzanu](https://github.com/herzzanu))
+
 ## v0.4.0-beta.0 (2023-01-26)
 
 #### :house: Internal
