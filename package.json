@@ -31,7 +31,8 @@
     "test:ember": "ember test",
     "test:ember-compatibility": "ember try:each",
     "prepack": "ember ts:precompile",
-    "postpack": "ember ts:clean"
+    "postpack": "ember ts:clean",
+    "release": "release-it"
   },
   "dependencies": {
     "@typescript-eslint/eslint-plugin": "^5.30.5",
