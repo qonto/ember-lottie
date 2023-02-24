@@ -66,12 +66,17 @@ export default class LottieComponent extends Component<LottieArgs> {
 
     this.args.onDataReady?.();
 
+    const { containerId } = this.args;
+    const container = containerId
+      ? (document.querySelector(`#${containerId}`) as Element)
+      : element;
+
     this.animation = lottie.loadAnimation({
       name: this.args.name,
       loop: this.args.loop,
       autoplay: this.autoplay,
       animationData,
-      container: document.querySelector(`#${this.args.containerId}`) || element,
+      container,
       rendererSettings: {
         progressiveLoad: true,
       },

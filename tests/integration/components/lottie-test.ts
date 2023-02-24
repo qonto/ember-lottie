@@ -18,12 +18,19 @@ module('Integration | Component | lottie', function (hooks) {
   setupRenderingTest(hooks);
   setupWindowMock(hooks);
 
+  const originalQuerySelector: ParentNode['querySelector'] =
+    document.querySelector;
+
   hooks.beforeEach(function (this: TestContext) {
     this.args = {
       onDataReady: (): void => {
         /* noop */
       },
     };
+  });
+
+  hooks.afterEach(function () {
+    document.querySelector = originalQuerySelector;
   });
 
   test('it renders', async function (this: TestContext, assert) {
@@ -177,5 +184,39 @@ module('Integration | Component | lottie', function (hooks) {
 
     find('svg');
     assert.dom('[data-test-autoplay=true]').exists();
+  });
+
+  test('it should not call document.querySelector when containerId is undefined or null', async function (this: TestContext, assert: any) {
+    const querySelector = sinon.spy();
+    document.querySelector = querySelector;
+    await render(hbs`
+      <Lottie
+        @path="/data.json"
+      />
+    `);
+
+    assert.false(querySelector.calledOnce);
+
+    await render(hbs`
+      <Lottie
+        @path="/data.json"
+        @containerId={{null}}
+      />
+    `);
+
+    assert.false(querySelector.calledOnce);
+  });
+
+  test('it should call document.querySelector when containerId is not falsy', async function (this: TestContext, assert: any) {
+    const querySelector = sinon.spy();
+    document.querySelector = querySelector;
+    await render(hbs`
+      <Lottie
+        @path="/data.json"
+        @containerId='this-is-an-id'
+      />
+    `);
+
+    assert.true(querySelector.calledOnce);
   });
 });
