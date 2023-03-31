@@ -1,8 +1,0 @@
-version: 2
-updates:
-  - package-ecosystem: "npm" 
-    directory: "/" # Location of package manifests
-    schedule:
-      interval: "weekly"
-    # Allow up to 10 open pull requests for pip dependencies
-    open-pull-requests-limit: 10
