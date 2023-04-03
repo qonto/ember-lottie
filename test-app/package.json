@@ -31,7 +31,7 @@
     "@ember/test-waiters": "^3.0.2",
     "@embroider/compat": "^2.1.1",
     "@embroider/core": "^2.1.1",
-    "@embroider/test-setup": "2.1.1",
+    "@embroider/test-setup": "^1.6.0",
     "@embroider/webpack": "^2.1.1",
     "@glimmer/component": "^1.1.2",
     "@glimmer/tracking": "^1.1.2",
@@ -88,7 +88,7 @@
     "ember-modifier": "^4.1.0",
     "ember-page-title": "^7.0.0",
     "ember-qunit": "^6.2.0",
-    "ember-resolver": "^10.0.0",
+    "ember-resolver": "^8.0.3",
     "ember-source-channel-url": "^3.0.0",
     "ember-source": "~4.11.0",
     "ember-template-lint": "^5.6.0",
@@ -108,8 +108,8 @@
     "release-it": "^14.2.1",
     "sinon": "^14.0.1",
     "tracked-built-ins": "^3.1.1",
-    "typescript": "^5.0.2",
-    "webpack": "^5.75.0"
+    "typescript": "^4.7.4",
+    "webpack": "^5.72.1"
   },
   "engines": {
     "node": "14.* || 16.* || >= 18"
