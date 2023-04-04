@@ -14,7 +14,7 @@ Render [lottie](https://github.com/airbnb/lottie-web) after effects animations i
 
 - Ember.js v3.28 or above
 - Ember CLI v3.28 or above
-- Node.js v12 or above
+- Node.js v14 or above
 
 ## Installation
 
@@ -26,9 +26,9 @@ ember install @qonto/ember-lottie
 
 ```hbs
 <Lottie
-  @name='empty state'
+  @name="empty state"
   @animationData={{this.animationData}}
-  @path='/data.json'
+  @path="/data.json"
   @loop={{false}}
   @autoplay={{false}}
   @speed={{500}}
