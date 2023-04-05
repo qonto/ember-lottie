@@ -43,7 +43,7 @@ jobs:
           node-version: 16.x
           cache: npm
       - name: Install Dependencies
-        run: npm install --no-shrinkwrap --legacy-peer-deps
+        run: npm install --no-shrinkwrap
       - name: Run Tests
         run: npm run test
 
@@ -74,7 +74,7 @@ jobs:
           node-version: 16.x
           cache: npm
       - name: Install Dependencies
-        run: npm ci --legacy-peer-deps
+        run: npm ci
       - name: Run Tests
-        run: ../node_modules/.bin/ember try:one ${{ matrix.try-scenario }}
+        run: npm run try:ember ${{ matrix.try-scenario }}
         working-directory: test-app
