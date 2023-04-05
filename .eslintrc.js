@@ -18,6 +18,15 @@ module.exports = {
   },
   rules: {},
   overrides: [
+    // ts files
+    {
+      files: ['**/*.ts'],
+      extends: [
+        'plugin:@typescript-eslint/eslint-recommended',
+        'plugin:@typescript-eslint/recommended',
+      ],
+      rules: {},
+    },
     // node files
     {
       files: [
@@ -30,6 +39,8 @@ module.exports = {
         './blueprints/*/index.js',
         './config/**/*.js',
         './tests/dummy/config/**/*.js',
+        './lib/*/index.js',
+        './server/**/*.js',
       ],
       parserOptions: {
         sourceType: 'script',
@@ -38,8 +49,7 @@ module.exports = {
         browser: false,
         node: true,
       },
-      plugins: ['node'],
-      extends: ['plugin:node/recommended'],
+      extends: ['plugin:n/recommended'],
       rules: {
         '@typescript-eslint/no-var-requires': 'off',
       },
