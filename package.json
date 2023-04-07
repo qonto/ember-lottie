@@ -142,5 +142,12 @@
     "npm": {
       "publish": false
     }
+  },
+  "pnpm": {
+    "peerDependencyRules": {
+      "ignoreMissing": [
+        "@babel/core"
+      ]
+    }
   }
 }
