@@ -66,28 +66,13 @@
     // work with TypeScript.
     "baseUrl": ".",
     "paths": {
-      "dummy/tests/*": [
-        "tests/*"
-      ],
-      "dummy/*": [
-        "tests/dummy/app/*",
-        "app/*"
-      ],
-      "@qonto/ember-lottie": [
-        "addon"
-      ],
-      "@qonto/ember-lottie/*": [
-        "addon/*"
-      ],
-      "@qonto/ember-lottie/test-support": [
-        "addon-test-support"
-      ],
-      "@qonto/ember-lottie/test-support/*": [
-        "addon-test-support/*"
-      ],
-      "*": [
-        "types/*"
-      ]
+      "dummy/tests/*": ["tests/*"],
+      "dummy/*": ["tests/dummy/app/*", "app/*"],
+      "@qonto/ember-lottie": ["addon"],
+      "@qonto/ember-lottie/*": ["addon/*"],
+      "@qonto/ember-lottie/test-support": ["addon-test-support"],
+      "@qonto/ember-lottie/test-support/*": ["addon-test-support/*"],
+      "*": ["types/*"]
     }
   },
   "include": [
