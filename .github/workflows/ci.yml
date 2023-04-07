@@ -25,26 +25,10 @@ jobs:
         with:
           node-version: 14.x
 
-      - uses: pnpm/action-setup@v2
+      - uses: NullVoxPopuli/action-setup-pnpm@v1
         name: Install pnpm
-        id: pnpm-install
         with:
-          version: 7
-          run_install: false
-
-      - name: Get pnpm store directory
-        id: pnpm-cache
-        shell: bash
-        run: |
-          echo "STORE_PATH=$(pnpm store path)" >> $GITHUB_OUTPUT
-
-      - uses: actions/cache@v3
-        name: Setup pnpm cache
-        with:
-          path: ${{ steps.pnpm-cache.outputs.STORE_PATH }}
-          key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
-          restore-keys: |
-            ${{ runner.os }}-pnpm-store-
+          pnpm-version: 7.29.0
 
       - name: Install Dependencies
         run: pnpm install
@@ -62,16 +46,17 @@ jobs:
 
     steps:
       - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
+
+      - name: Install Node
+        uses: actions/setup-node@v3
         with:
           node-version: 14.x
 
-      - uses: pnpm/action-setup@v2
+      - uses: NullVoxPopuli/action-setup-pnpm@v1
         name: Install pnpm
-        id: pnpm-install
         with:
-          version: 7
-          run_install: false
+          pnpm-version: 7.29.0
+          no-lockfile: true
 
       - name: Install Dependencies
         run: pnpm install
@@ -104,26 +89,10 @@ jobs:
         with:
           node-version: 14.x
 
-      - uses: pnpm/action-setup@v2
+      - uses: NullVoxPopuli/action-setup-pnpm@v1
         name: Install pnpm
-        id: pnpm-install
         with:
-          version: 7
-          run_install: false
-
-      - name: Get pnpm store directory
-        id: pnpm-cache
-        shell: bash
-        run: |
-          echo "STORE_PATH=$(pnpm store path)" >> $GITHUB_OUTPUT
-
-      - uses: actions/cache@v3
-        name: Setup pnpm cache
-        with:
-          path: ${{ steps.pnpm-cache.outputs.STORE_PATH }}
-          key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
-          restore-keys: |
-            ${{ runner.os }}-pnpm-store-
+          pnpm-version: 7.29.0
 
       - name: Install Dependencies
         run: pnpm install
