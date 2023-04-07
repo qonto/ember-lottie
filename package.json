@@ -55,6 +55,7 @@
     "@glimmer/component": "^1.1.2",
     "@glimmer/tracking": "^1.1.2",
     "@release-it-plugins/lerna-changelog": "^5.0.0",
+    "@types/ember": "^4.0.3",
     "@types/ember-qunit": "^5.0.0",
     "@types/ember__application": "^4.0.0",
     "@types/ember__array": "^4.0.1",

@@ -13,6 +13,7 @@ specifiers:
   '@glimmer/component': ^1.1.2
   '@glimmer/tracking': ^1.1.2
   '@release-it-plugins/lerna-changelog': ^5.0.0
+  '@types/ember': ^4.0.3
   '@types/ember-qunit': ^5.0.0
   '@types/ember__application': ^4.0.0
   '@types/ember__array': ^4.0.1
@@ -95,6 +96,7 @@ devDependencies:
   '@glimmer/component': 1.1.2
   '@glimmer/tracking': 1.1.2
   '@release-it-plugins/lerna-changelog': 5.0.0_release-it@14.14.3
+  '@types/ember': 4.0.3
   '@types/ember-qunit': 5.0.2_kzwsaxkqup2inborfmd55uo3na
   '@types/ember__application': 4.0.5
   '@types/ember__array': 4.0.3
@@ -2279,6 +2281,9 @@ packages:
     resolution: {integrity: sha512-+f0knTIJJkRX5xijeSI/n4FvLfhMFFxIxODyFFFFB483EryYuts3QzpTwU5D66WQ5rAbZvpPRXRMPTTCNJoUhg==}
     dependencies:
       '@types/ember__object': 4.0.5
+    transitivePeerDependencies:
+      - '@babel/core'
+      - supports-color
     dev: true
 
   /@types/ember__debug/4.0.3:
@@ -2304,6 +2309,9 @@ packages:
     dependencies:
       '@types/ember': 4.0.3
       '@types/rsvp': 4.0.4
+    transitivePeerDependencies:
+      - '@babel/core'
+      - supports-color
     dev: true
 
   /@types/ember__owner/4.0.3:
@@ -2321,12 +2329,18 @@ packages:
       '@types/ember__controller': 4.0.4
       '@types/ember__object': 4.0.5
       '@types/ember__service': 4.0.2
+    transitivePeerDependencies:
+      - '@babel/core'
+      - supports-color
     dev: true
 
   /@types/ember__runloop/4.0.2:
     resolution: {integrity: sha512-E0/n/O/JnPQpMrabsDKtVOXX4tbCrOA116HjmD+eorgsPFLm8tAUwl3wQGroeJt8BSE7uHjsQdDA7JUkbsT3IQ==}
     dependencies:
       '@types/ember': 4.0.3
+    transitivePeerDependencies:
+      - '@babel/core'
+      - supports-color
     dev: true
 
   /@types/ember__service/4.0.2:
@@ -2368,6 +2382,9 @@ packages:
     resolution: {integrity: sha512-LWkLgf09/GqyrUuoKtAB6qP7n36yAzc2yOh1L5fVpZGCBv5KQiGWUQv5uBoo4c1mllD+IBOMxei3bR4cx6SwZA==}
     dependencies:
       '@types/ember': 4.0.3
+    transitivePeerDependencies:
+      - '@babel/core'
+      - supports-color
     dev: true
 
   /@types/eslint-scope/3.7.4:
