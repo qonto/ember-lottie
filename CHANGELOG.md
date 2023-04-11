@@ -1,3 +1,7 @@
+## v0.5.0-alpha.0 (2023-04-11)
+
+- Convert to v2 addon format
+
 ## v0.4.0 (2023-02-24)
 
 #### :house: Internal
