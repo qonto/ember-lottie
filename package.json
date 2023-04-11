@@ -1,5 +1,5 @@
 {
-  "name": "@qonto/ember-lottie",
+  "name": "ember-lottie",
   "version": "0.0.0",
   "private": true,
   "repository": {
@@ -9,14 +9,13 @@
   "license": "MIT",
   "author": "",
   "scripts": {
-    "build": "npm run build --workspace @qonto/ember-lottie",
-    "lint": "npm run lint --workspaces --if-present",
-    "lint:fix": "npm run lint:fix --workspaces --if-present",
-    "prepare": "npm run build",
+    "build": "pnpm run build --workspace @qonto/ember-lottie",
+    "lint": "pnpm run lint --workspaces --if-present",
+    "lint:fix": "pnpm run lint:fix --workspaces --if-present",
     "start": "concurrently 'npm:start:*' --restart-after 5000 --prefix-colors cyan,white,yellow",
-    "start:addon": "npm start --workspace @qonto/ember-lottie -- --no-watch.clearScreen",
-    "start:test-app": "npm start --workspace test-app",
-    "test": "npm run test --workspaces --if-present"
+    "start:addon": "pnpm start --workspace @qonto/ember-lottie -- --no-watch.clearScreen",
+    "start:test-app": "pnpm start --workspace test-app",
+    "test": "pnpm run test --workspaces --if-present"
   },
   "devDependencies": {
     "concurrently": "^7.2.1",
