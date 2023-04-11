@@ -1,0 +1,15 @@
+version: 2
+updates:
+  - package-ecosystem: "npm"
+    directory: "/test-app" # Location of package manifests
+    schedule:
+      interval: "weekly"
+    # Allow up to 10 open pull requests for pip dependencies
+    open-pull-requests-limit: 10
+
+  - package-ecosystem: "npm"
+    directory: "/ember-lottie" # Location of package manifests
+    schedule:
+      interval: "weekly"
+    # Allow up to 10 open pull requests for pip dependencies
+    open-pull-requests-limit: 10
