@@ -9,13 +9,14 @@
   "license": "MIT",
   "author": "",
   "scripts": {
-    "build": "pnpm run build --workspace @qonto/ember-lottie",
-    "lint": "pnpm run lint --workspaces --if-present",
-    "lint:fix": "pnpm run lint:fix --workspaces --if-present",
+    "build": "pnpm --filter @qonto/ember-lottie build",
+    "lint": "pnpm --filter '*' lint",
+    "lint:fix": "pnpm --filter '*' lint:fix",
+    "prepare": "pnpm build",
     "start": "concurrently 'npm:start:*' --restart-after 5000 --prefix-colors cyan,white,yellow",
-    "start:addon": "pnpm start --workspace @qonto/ember-lottie -- --no-watch.clearScreen",
-    "start:test-app": "pnpm start --workspace test-app",
-    "test": "pnpm run test --workspaces --if-present"
+    "start:addon": "pnpm --filter @qonto/ember-lottie start --no-watch.clearScreen",
+    "start:test-app": "pnpm --filter test-app start",
+    "test": "pnpm --filter '*' test"
   },
   "devDependencies": {
     "concurrently": "^7.2.1",
