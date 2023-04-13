@@ -19,17 +19,26 @@ jobs:
 
     steps:
       - uses: actions/checkout@v3
+
       - name: Install Node
         uses: actions/setup-node@v3
         with:
-          node-version: 14.x
-          cache: npm
+          node-version: 16.x
+
+      - uses: NullVoxPopuli/action-setup-pnpm@v1
+        name: Install pnpm
+        with:
+          pnpm-version: 7.29.0
+
       - name: Install Dependencies
-        run: npm ci
+        run: pnpm install
+
       - name: Lint
-        run: npm run lint
+        run: pnpm lint
+
       - name: Run Tests
-        run: npm run test:ember
+        run: pnpm test:ember
+        working-directory: test-app
 
   floating:
     name: "Floating Dependencies"
@@ -38,14 +47,23 @@ jobs:
 
     steps:
       - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
+
+      - name: Install Node
+        uses: actions/setup-node@v3
         with:
-          node-version: 14.x
-          cache: npm
+          node-version: 16.x
+
+      - uses: NullVoxPopuli/action-setup-pnpm@v1
+        name: Install pnpm
+        with:
+          pnpm-version: 7.29.0
+          no-lockfile: true
+
       - name: Install Dependencies
-        run: npm install --no-shrinkwrap
+        run: pnpm install
       - name: Run Tests
         run: npm run test:ember
+        working-directory: test-app
 
   try-scenarios:
     name: ${{ matrix.try-scenario }}
@@ -63,16 +81,25 @@ jobs:
           - ember-beta
           - ember-canary
           - ember-classic
+          - embroider-safe
           - embroider-optimized
 
     steps:
       - uses: actions/checkout@v3
+
       - name: Install Node
         uses: actions/setup-node@v3
         with:
-          node-version: 14.x
-          cache: npm
+          node-version: 16.x
+
+      - uses: NullVoxPopuli/action-setup-pnpm@v1
+        name: Install pnpm
+        with:
+          pnpm-version: 7.29.0
+
       - name: Install Dependencies
-        run: npm ci
+        run: pnpm install
+
       - name: Run Tests
-        run: ./node_modules/.bin/ember try:one ${{ matrix.try-scenario }}
+        run: pnpm try:ember ${{ matrix.try-scenario }}
+        working-directory: test-app

@@ -1,118 +1,29 @@
 {
-  "name": "@qonto/ember-lottie",
+  "name": "ember-lottie",
   "version": "0.4.0",
-  "description": "Render lottie after effects animations in Ember.js",
-  "keywords": [
-    "ember-addon",
-    "after effects",
-    "animation",
-    "lottie"
-  ],
+  "private": true,
   "repository": {
     "type": "git",
     "url": "git@github.com:qonto/ember-lottie.git"
   },
   "license": "MIT",
   "author": "",
-  "directories": {
-    "doc": "doc",
-    "test": "tests"
-  },
   "scripts": {
-    "build": "ember build --environment=production",
-    "lint": "concurrently \"npm:lint:*(!fix)\" --names \"lint:\"",
-    "lint:fix": "concurrently \"npm:lint:*:fix\" --names \"fix:\"",
-    "lint:hbs": "ember-template-lint .",
-    "lint:hbs:fix": "ember-template-lint . --fix",
-    "lint:js": "eslint . --cache",
-    "lint:js:fix": "eslint . --fix",
-    "start": "ember serve",
-    "test": "concurrently \"npm:lint\" \"npm:test:*\" --names \"lint,test:\"",
-    "test:ember": "ember test",
-    "test:ember-compatibility": "ember try:each",
-    "prepack": "ember ts:precompile",
-    "postpack": "ember ts:clean",
-    "release": "release-it"
-  },
-  "dependencies": {
-    "ember-auto-import": "^2.6.1",
-    "ember-cli-babel": "^7.26.11",
-    "ember-cli-htmlbars": "^6.2.0",
-    "ember-cli-typescript": "^5.1.0",
-    "ember-window-mock": "^0.8.1",
-    "lottie-web": "^5.9.6"
+    "build": "pnpm --filter @qonto/ember-lottie build",
+    "lint": "pnpm --filter '*' lint",
+    "lint:fix": "pnpm --filter '*' lint:fix",
+    "prepare": "pnpm build",
+    "start": "concurrently 'npm:start:*' --restart-after 5000 --prefix-colors cyan,white,yellow",
+    "start:addon": "pnpm --filter @qonto/ember-lottie start --no-watch.clearScreen",
+    "start:test-app": "pnpm --filter test-app start",
+    "test": "pnpm --filter '*' test"
   },
   "devDependencies": {
-    "@ember/optional-features": "^2.0.0",
-    "@ember/render-modifiers": "^2.0.4",
-    "@ember/string": "^3.0.1",
-    "@ember/test-helpers": "^2.9.3",
-    "@ember/test-waiters": "^3.0.2",
-    "@embroider/compat": "^2.1.1",
-    "@embroider/core": "^2.1.1",
-    "@embroider/test-setup": "^2.1.1",
-    "@embroider/webpack": "^2.1.1",
-    "@glimmer/component": "^1.1.2",
-    "@glimmer/tracking": "^1.1.2",
     "@release-it-plugins/lerna-changelog": "^5.0.0",
-    "@types/ember-qunit": "^5.0.0",
-    "@types/ember__application": "^4.0.0",
-    "@types/ember__array": "^4.0.1",
-    "@types/ember__component": "^4.0.8",
-    "@types/ember__controller": "^4.0.0",
-    "@types/ember__debug": "^4.0.1",
-    "@types/ember__engine": "^4.0.0",
-    "@types/ember__error": "^4.0.0",
-    "@types/ember__object": "^4.0.2",
-    "@types/ember__polyfills": "^4.0.0",
-    "@types/ember__routing": "^4.0.7",
-    "@types/ember__runloop": "^4.0.1",
-    "@types/ember__service": "^4.0.0",
-    "@types/ember__string": "^3.0.9",
-    "@types/ember__template": "^4.0.0",
-    "@types/ember__test": "^4.0.0",
-    "@types/ember__test-helpers": "^2.6.1",
-    "@types/ember__utils": "^4.0.0",
-    "@types/htmlbars-inline-precompile": "^3.0.0",
-    "@types/qunit": "^2.19.1",
-    "@types/rsvp": "^4.0.4",
-    "@types/sinon": "^10.0.13",
-    "@typescript-eslint/eslint-plugin": "^5.30.5",
-    "@typescript-eslint/parser": "^5.30.5",
-    "babel-eslint": "^10.1.0",
-    "broccoli-asset-rev": "^3.0.0",
-    "concurrently": "^7.6.0",
-    "ember-cli": "~4.11.0",
-    "ember-cli-dependency-checker": "^3.3.1",
-    "ember-cli-inject-live-reload": "^2.1.0",
-    "ember-cli-sri": "^2.1.1",
-    "ember-cli-terser": "^4.0.2",
-    "ember-cli-typescript-blueprints": "^3.0.0",
-    "ember-load-initializers": "^2.1.2",
-    "ember-page-title": "^7.0.0",
-    "ember-qunit": "^6.2.0",
-    "ember-resolver": "^10.0.0",
-    "ember-source": "~4.11.0",
-    "ember-source-channel-url": "^3.0.0",
-    "ember-template-lint": "^5.6.0",
-    "ember-try": "^2.0.0",
-    "eslint": "^7.32.0",
-    "eslint-config-prettier": "^8.6.0",
-    "eslint-plugin-ember": "^11.4.7",
-    "eslint-plugin-n": "^15.6.1",
-    "eslint-plugin-prettier": "^4.2.1",
-    "eslint-plugin-qunit": "^7.3.4",
-    "loader.js": "^4.7.0",
-    "prettier": "^2.8.4",
-    "qunit": "^2.19.4",
-    "qunit-dom": "^2.0.0",
-    "release-it": "^14.2.1",
-    "sinon": "^14.0.1",
-    "typescript": "^4.7.4",
-    "webpack": "^5.75.0"
-  },
-  "peerDependencies": {
-    "ember-source": "^3.28.0 || ^4.0.0"
+    "@release-it-plugins/workspaces": "^3.2.0",
+    "concurrently": "^7.2.1",
+    "prettier": "^2.5.1",
+    "release-it": "^15.5.0"
   },
   "engines": {
     "node": "14.* || 16.* || >= 18"
@@ -120,17 +31,13 @@
   "publishConfig": {
     "registry": "https://registry.npmjs.org"
   },
-  "ember": {
-    "edition": "octane"
-  },
-  "ember-addon": {
-    "configPath": "tests/dummy/config"
-  },
   "release-it": {
     "plugins": {
       "@release-it-plugins/lerna-changelog": {
-        "infile": "CHANGELOG.md"
-      }
+        "infile": "CHANGELOG.md",
+        "launchEditor": true
+      },
+      "@release-it-plugins/workspaces": true
     },
     "git": {
       "tagName": "v${version}"
@@ -139,8 +46,6 @@
       "release": true,
       "tokenRef": "GITHUB_AUTH"
     },
-    "npm": {
-      "publish": false
-    }
+    "npm": false
   }
 }
