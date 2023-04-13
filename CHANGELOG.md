@@ -1,3 +1,14 @@
+## v0.5.0 (2023-04-13)
+
+#### :house: Internal
+
+- [#63](https://github.com/qonto/ember-lottie/pull/63) Convert to v2 addon format ([@nickschot](https://github.com/nickschot))
+
+#### Committers: 2
+
+- [@nickschot](https://github.com/nickschot)
+- [@anas7asia](https://github.com/anas7asia)
+
 ## v0.4.0 (2023-02-24)
 
 #### :house: Internal
