@@ -28,7 +28,7 @@ jobs:
       - uses: NullVoxPopuli/action-setup-pnpm@v1
         name: Install pnpm
         with:
-          pnpm-version: 7.29.0
+          pnpm-version: 8.5.1
 
       - name: Install Dependencies
         run: pnpm install
@@ -56,7 +56,7 @@ jobs:
       - uses: NullVoxPopuli/action-setup-pnpm@v1
         name: Install pnpm
         with:
-          pnpm-version: 7.29.0
+          pnpm-version: 8.5.1
           no-lockfile: true
 
       - name: Install Dependencies
@@ -95,7 +95,7 @@ jobs:
       - uses: NullVoxPopuli/action-setup-pnpm@v1
         name: Install pnpm
         with:
-          pnpm-version: 7.29.0
+          pnpm-version: 8.5.1
 
       - name: Install Dependencies
         run: pnpm install
