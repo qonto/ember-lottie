@@ -10,6 +10,7 @@ import * as sinon from 'sinon';
 
 interface TestContext extends TestContextBase {
   onDataReady: () => void;
+  fetchOptions: RequestInit;
 }
 
 const NOOP = (): void => {};
@@ -198,5 +199,37 @@ module('Integration | Component | lottie', function (hooks) {
     `);
 
     assert.true(querySelector.calledOnce);
+  });
+
+  test('it should pass fetchOptions to fetch method', async function (this: TestContext, assert) {
+    this.fetchOptions = { credentials: 'omit' };
+    const fetch = sinon.spy(window, 'fetch');
+    await render<TestContext>(hbs`
+      <Lottie
+        @path="/data.json"
+        @fetchOptions={{this.fetchOptions}}
+      />
+    `);
+    const fetchArgs = fetch.getCall(0).args;
+    assert.deepEqual(
+      fetchArgs,
+      ['/data.json', { credentials: 'omit' }],
+      'fetch arguments match',
+    );
+  });
+
+  test('it should pass path to fetch method when fetchOptions is undefined', async function (this: TestContext, assert) {
+    const fetch = sinon.spy(window, 'fetch');
+    await render(hbs`
+      <Lottie
+        @path="/data.json"
+      />
+    `);
+    const fetchArgs = fetch.getCall(0).args;
+    assert.deepEqual(
+      fetchArgs,
+      ['/data.json', undefined],
+      'fetch arguments match',
+    );
   });
 });
