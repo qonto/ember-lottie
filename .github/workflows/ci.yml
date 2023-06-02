@@ -20,15 +20,11 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
-      - name: Install Node
-        uses: actions/setup-node@v3
-        with:
-          node-version: 16.x
-
       - uses: NullVoxPopuli/action-setup-pnpm@v1
         name: Install pnpm
         with:
           pnpm-version: 8.5.1
+          node-version: 16.x
 
       - name: Install Dependencies
         run: pnpm install
@@ -48,15 +44,11 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
-      - name: Install Node
-        uses: actions/setup-node@v3
-        with:
-          node-version: 16.x
-
       - uses: NullVoxPopuli/action-setup-pnpm@v1
         name: Install pnpm
         with:
           pnpm-version: 8.5.1
+          node-version: 16.x
           no-lockfile: true
 
       - name: Install Dependencies
@@ -87,15 +79,11 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
-      - name: Install Node
-        uses: actions/setup-node@v3
-        with:
-          node-version: 16.x
-
       - uses: NullVoxPopuli/action-setup-pnpm@v1
         name: Install pnpm
         with:
           pnpm-version: 8.5.1
+          node-version: 16.x
 
       - name: Install Dependencies
         run: pnpm install
