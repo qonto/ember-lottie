@@ -34,6 +34,7 @@ ember install @qonto/ember-lottie
   @speed={{500}}
   @containerId={{this.id}}
   @onDataReady={{this.args.onDataReady}}
+  @fetchOptions={{this.fetchOptions}}
 />
 ```
 
@@ -51,6 +52,7 @@ ember install @qonto/ember-lottie
 | speed         | number   | `1` is normal speed                                                                             |
 | containerId   | string   | the dom element id on which to render the animation (mandatory)                                 |
 | onDataReady   | function | a function that triggers the Lottie when you want it                                            |
+| fetchOptions  | object   | any additional params to pass to fetch function (eg: `{credentials: "include"}`)                |     |
 
 ## Contributing
 

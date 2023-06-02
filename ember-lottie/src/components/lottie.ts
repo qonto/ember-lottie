@@ -27,6 +27,7 @@ export interface LottieArgs {
   speed?: number;
   containerId?: string;
   onDataReady?: () => void;
+  fetchOptions?: RequestInit;
 }
 
 export default class LottieComponent extends Component<LottieArgs> {
@@ -52,7 +53,7 @@ export default class LottieComponent extends Component<LottieArgs> {
       animationData = this.args.animationData;
     } else if (this.args.path) {
       try {
-        const response = await fetch(this.args.path);
+        const response = await fetch(this.args.path, this.args.fetchOptions);
 
         if (response.status === 404) {
           throw new NotFoundError();

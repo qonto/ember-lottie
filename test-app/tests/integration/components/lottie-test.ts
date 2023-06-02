@@ -219,4 +219,18 @@ module('Integration | Component | lottie', function (hooks) {
 
     assert.true(querySelector.calledOnce);
   });
+
+  test('it should pass fetchOptions to fetch method', async function (this: TestContext, assert: any) {
+    this.args.fetchOptions = { credentials: 'omit' };
+    const fetch = sinon.spy();
+    window.fetch = fetch;
+    await render(hbs`
+      <Lottie
+        @path="/data.json"
+        @fetchOptions={{this.args.fetchOptions}}
+      />
+    `);
+
+    assert.true(fetch.calledOnce);
+  });
 });
