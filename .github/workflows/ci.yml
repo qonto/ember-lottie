@@ -26,9 +26,6 @@ jobs:
           pnpm-version: 8.5.1
           node-version: 16.x
 
-      - name: Install Dependencies
-        run: pnpm install
-
       - name: Lint
         run: pnpm lint
 
@@ -51,8 +48,6 @@ jobs:
           node-version: 16.x
           no-lockfile: true
 
-      - name: Install Dependencies
-        run: pnpm install
       - name: Run Tests
         run: npm run test:ember
         working-directory: test-app
@@ -84,9 +79,6 @@ jobs:
         with:
           pnpm-version: 8.5.1
           node-version: 16.x
-
-      - name: Install Dependencies
-        run: pnpm install
 
       - name: Run Tests
         run: pnpm try:ember ${{ matrix.try-scenario }}
