@@ -5,9 +5,6 @@ import { hbs } from 'ember-cli-htmlbars';
 import type { TestContext as TestContextBase } from '@ember/test-helpers';
 
 import type { LottieArgs } from '@qonto/ember-lottie/components/lottie';
-
-import window from 'ember-window-mock';
-import { setupWindowMock } from 'ember-window-mock/test-support';
 import * as sinon from 'sinon';
 
 interface TestContext extends TestContextBase {
@@ -16,10 +13,11 @@ interface TestContext extends TestContextBase {
 
 module('Integration | Component | lottie', function (hooks) {
   setupRenderingTest(hooks);
-  setupWindowMock(hooks);
 
   const originalQuerySelector: ParentNode['querySelector'] =
     document.querySelector;
+
+  const originalFetch: Window['fetch'] = window.fetch;
 
   hooks.beforeEach(function (this: TestContext) {
     this.args = {
@@ -31,6 +29,7 @@ module('Integration | Component | lottie', function (hooks) {
 
   hooks.afterEach(function () {
     document.querySelector = originalQuerySelector;
+    window.fetch = originalFetch;
   });
 
   test('it renders', async function (this: TestContext, assert) {
@@ -220,17 +219,37 @@ module('Integration | Component | lottie', function (hooks) {
     assert.true(querySelector.calledOnce);
   });
 
-  test('it should pass fetchOptions to fetch method', async function (this: TestContext, assert: any) {
+  test('it should pass fetchOptions to fetch method', async function (this: TestContext, assert) {
+    this.args.path = '/data.json';
     this.args.fetchOptions = { credentials: 'omit' };
-    const fetch = sinon.spy();
-    window.fetch = fetch;
+    const fetch = sinon.spy(window, 'fetch');
     await render(hbs`
       <Lottie
-        @path="/data.json"
+        @path={{this.args.path}}
         @fetchOptions={{this.args.fetchOptions}}
       />
     `);
+    const fetchArgs = fetch.getCall(0).args;
+    assert.deepEqual(
+      fetchArgs,
+      ['/data.json', { credentials: 'omit' }],
+      'fetch arguments match'
+    );
+  });
 
-    assert.true(fetch.calledOnce);
+  test('it should pass path to fetch method when fetchOptions is undefined', async function (this: TestContext, assert) {
+    this.args.path = '/data.json';
+    const fetch = sinon.spy(window, 'fetch');
+    await render(hbs`
+      <Lottie
+        @path={{this.args.path}}
+      />
+    `);
+    const fetchArgs = fetch.getCall(0).args;
+    assert.deepEqual(
+      fetchArgs,
+      ['/data.json', undefined],
+      'fetch arguments match'
+    );
   });
 });
