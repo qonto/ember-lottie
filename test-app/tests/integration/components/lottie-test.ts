@@ -5,6 +5,8 @@ import { hbs } from 'ember-cli-htmlbars';
 import type { TestContext as TestContextBase } from '@ember/test-helpers';
 
 import type { LottieArgs } from '@qonto/ember-lottie/components/lottie';
+import window from 'ember-window-mock';
+import { setupWindowMock } from 'ember-window-mock/test-support';
 import * as sinon from 'sinon';
 
 interface TestContext extends TestContextBase {
@@ -13,11 +15,10 @@ interface TestContext extends TestContextBase {
 
 module('Integration | Component | lottie', function (hooks) {
   setupRenderingTest(hooks);
+  setupWindowMock(hooks);
 
   const originalQuerySelector: ParentNode['querySelector'] =
     document.querySelector;
-
-  const originalFetch: Window['fetch'] = window.fetch;
 
   hooks.beforeEach(function (this: TestContext) {
     this.args = {
@@ -29,7 +30,6 @@ module('Integration | Component | lottie', function (hooks) {
 
   hooks.afterEach(function () {
     document.querySelector = originalQuerySelector;
-    window.fetch = originalFetch;
   });
 
   test('it renders', async function (this: TestContext, assert) {
