@@ -53,7 +53,10 @@ export default class LottieComponent extends Component<LottieArgs> {
       animationData = this.args.animationData;
     } else if (this.args.path) {
       try {
-        const response = await fetch(this.args.path, this.args.fetchOptions);
+        const response = await window.fetch(
+          this.args.path,
+          this.args.fetchOptions
+        );
 
         if (response.status === 404) {
           throw new NotFoundError();
