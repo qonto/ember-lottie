@@ -1,4 +1,4 @@
-lockfileVersion: '6.1'
+lockfileVersion: '6.0'
 
 settings:
   autoInstallPeers: true
@@ -2070,7 +2070,7 @@ packages:
       js-string-escape: 1.0.1
       lodash: 4.17.21
       resolve-package-path: 4.0.3
-      semver: 7.4.0
+      semver: 7.5.1
       typescript-memoize: 1.1.1
 
   /@embroider/test-setup@2.1.1:
@@ -5553,7 +5553,7 @@ packages:
       caniuse-lite: 1.0.30001477
       isbot: 3.6.10
       object-path: 0.11.8
-      semver: 7.4.0
+      semver: 7.5.1
       ua-parser-js: 1.0.35
     dev: true
 
