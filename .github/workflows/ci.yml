@@ -20,18 +20,11 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
-      - name: Install Node
-        uses: actions/setup-node@v3
-        with:
-          node-version: 16.x
-
       - uses: NullVoxPopuli/action-setup-pnpm@v1
         name: Install pnpm
         with:
           pnpm-version: 8.5.1
-
-      - name: Install Dependencies
-        run: pnpm install
+          node-version: 16.x
 
       - name: Lint
         run: pnpm lint
@@ -48,19 +41,13 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
-      - name: Install Node
-        uses: actions/setup-node@v3
-        with:
-          node-version: 16.x
-
       - uses: NullVoxPopuli/action-setup-pnpm@v1
         name: Install pnpm
         with:
           pnpm-version: 8.5.1
+          node-version: 16.x
           no-lockfile: true
 
-      - name: Install Dependencies
-        run: pnpm install
       - name: Run Tests
         run: npm run test:ember
         working-directory: test-app
@@ -87,18 +74,11 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
-      - name: Install Node
-        uses: actions/setup-node@v3
-        with:
-          node-version: 16.x
-
       - uses: NullVoxPopuli/action-setup-pnpm@v1
         name: Install pnpm
         with:
           pnpm-version: 8.5.1
-
-      - name: Install Dependencies
-        run: pnpm install
+          node-version: 16.x
 
       - name: Run Tests
         run: pnpm try:ember ${{ matrix.try-scenario }}
