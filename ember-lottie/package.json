@@ -66,7 +66,7 @@
     "@types/ember__service": "^4.0.0",
     "@types/ember__string": "^3.16.0",
     "@types/ember__template": "^4.0.0",
-    "@types/ember__test": "^4.0.0",
+    "@types/ember__test": "^4.0.2",
     "@types/ember__utils": "^4.0.0",
     "@typescript-eslint/eslint-plugin": "5.59.6",
     "@typescript-eslint/parser": "5.60.0",
