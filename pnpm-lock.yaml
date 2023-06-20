@@ -234,8 +234,8 @@ importers:
         specifier: ^4.0.0
         version: 4.0.0(@babel/core@7.21.3)
       '@types/ember-data__serializer':
-        specifier: ^4.0.1
-        version: 4.0.1(@babel/core@7.21.3)
+        specifier: ^4.0.2
+        version: 4.0.2(@babel/core@7.21.3)
       '@types/ember-data__store':
         specifier: ^4.0.2
         version: 4.0.2(@babel/core@7.21.3)
@@ -2979,8 +2979,8 @@ packages:
       - supports-color
     dev: true
 
-  /@types/ember-data__serializer@4.0.1(@babel/core@7.21.3):
-    resolution: {integrity: sha512-Z1ldnwZE3gIBFZ+p1InrbT29TIARtBlTHpc0nx3n48Tuqm7KBUwSlFpNDYPX5MU+8DWIKH2j6HVqqlxQO+94eg==}
+  /@types/ember-data__serializer@4.0.2(@babel/core@7.21.3):
+    resolution: {integrity: sha512-QayXyMizZToClxYQwwAleHQf/Cxi/VFg09LMyrFKUIHZ4mvZJaUNlU2Sigt/xcVYrE9JcKAigzJCtqfigz03CQ==}
     dependencies:
       '@types/ember-data': 4.4.9(@babel/core@7.21.3)
     transitivePeerDependencies:
