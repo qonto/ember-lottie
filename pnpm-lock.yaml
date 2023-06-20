@@ -261,8 +261,8 @@ importers:
         specifier: ^4.0.3
         version: 4.0.3(@babel/core@7.21.3)
       '@types/ember__destroyable':
-        specifier: ^4.0.1
-        version: 4.0.1
+        specifier: ^4.0.2
+        version: 4.0.2
       '@types/ember__engine':
         specifier: ^4.0.4
         version: 4.0.4(@babel/core@7.21.3)
@@ -3100,8 +3100,8 @@ packages:
       - supports-color
     dev: true
 
-  /@types/ember__destroyable@4.0.1:
-    resolution: {integrity: sha512-U497H5zW2bfdwmX1rktaSe+IsOrcqLn7jtrHI2dNnf9le38e1Wcnes8amA9PCv4lOhH+Mc3nkNIdQx38DwflXA==}
+  /@types/ember__destroyable@4.0.2:
+    resolution: {integrity: sha512-1aBorZlXN06iAo51qE04xF5VH+KiULLVIfCu4bV7cW/bgGaV5myTS7C38xrtua1sPSpZDMMvHeqFOzmFnVJZEw==}
     dev: true
 
   /@types/ember__engine@4.0.4(@babel/core@7.21.3):
