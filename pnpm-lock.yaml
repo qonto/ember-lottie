@@ -195,8 +195,8 @@ importers:
         specifier: ^2.9.3
         version: 2.9.3(@babel/core@7.21.3)(ember-source@4.11.0)
       '@embroider/compat':
-        specifier: ^2.1.1
-        version: 2.1.1(@embroider/core@2.1.1)
+        specifier: ^3.0.2
+        version: 3.0.2(@embroider/core@2.1.1)
       '@embroider/core':
         specifier: ^2.1.1
         version: 2.1.1
@@ -1639,12 +1639,13 @@ packages:
       '@ember-data/store': 4.11.3(@babel/core@7.21.3)(@ember-data/model@4.11.3)(@ember-data/record-data@4.11.3)(@ember-data/tracking@4.11.3)(@ember/string@3.0.1)(@glimmer/tracking@1.1.2)(ember-source@4.11.0)(webpack@5.78.0)
       '@ember/edition-utils': 1.2.0
       '@ember/string': 3.0.1
-      '@embroider/macros': 1.10.0
+      '@embroider/macros': 1.11.1
       ember-auto-import: 2.6.3(webpack@5.78.0)
       ember-cli-babel: 7.26.11
       ember-cli-test-info: 1.0.0
       ember-inflector: 4.0.2
     transitivePeerDependencies:
+      - '@glint/template'
       - supports-color
       - webpack
     dev: true
@@ -1653,9 +1654,10 @@ packages:
     resolution: {integrity: sha512-RTLY2N9t1SXr4e90VBKi+3PIitwjTMBU8BcEhnKovT//sGlywohHq7T36H6nJuITRtki3On9PpbJOhhQZuyAlQ==}
     engines: {node: ^14.8.0 || 16.* || >= 18.*}
     dependencies:
-      '@embroider/macros': 1.10.0
+      '@embroider/macros': 1.11.1
       ember-cli-babel: 7.26.11
     transitivePeerDependencies:
+      - '@glint/template'
       - supports-color
     dev: true
 
@@ -1668,10 +1670,11 @@ packages:
       '@ember-data/private-build-infra': 4.11.3
       '@ember/edition-utils': 1.2.0
       '@ember/string': 3.0.1
-      '@embroider/macros': 1.10.0
+      '@embroider/macros': 1.11.1
       ember-auto-import: 2.6.3(webpack@5.78.0)
       ember-cli-babel: 7.26.11
     transitivePeerDependencies:
+      - '@glint/template'
       - supports-color
       - webpack
     dev: true
@@ -1696,7 +1699,7 @@ packages:
       '@ember-data/tracking': 4.11.3
       '@ember/edition-utils': 1.2.0
       '@ember/string': 3.0.1
-      '@embroider/macros': 1.10.0
+      '@embroider/macros': 1.11.1
       ember-auto-import: 2.6.3(webpack@5.78.0)
       ember-cached-decorator-polyfill: 1.0.1(@babel/core@7.21.3)(ember-source@4.11.0)
       ember-cli-babel: 7.26.11
@@ -1707,6 +1710,7 @@ packages:
       inflection: 2.0.1
     transitivePeerDependencies:
       - '@babel/core'
+      - '@glint/template'
       - ember-source
       - supports-color
       - webpack
@@ -1721,7 +1725,7 @@ packages:
       '@babel/runtime': 7.21.0
       '@ember-data/canary-features': 4.11.3
       '@ember/edition-utils': 1.2.0
-      '@embroider/macros': 1.10.0
+      '@embroider/macros': 1.11.1
       babel-import-util: 1.3.0
       babel-plugin-debug-macros: 0.3.4(@babel/core@7.21.3)
       babel-plugin-filter-imports: 4.0.0
@@ -1745,6 +1749,7 @@ packages:
       semver: 7.5.1
       silent-error: 1.1.1
     transitivePeerDependencies:
+      - '@glint/template'
       - supports-color
     dev: true
 
@@ -1758,10 +1763,11 @@ packages:
       '@ember-data/private-build-infra': 4.11.3
       '@ember-data/store': 4.11.3(@babel/core@7.21.3)(@ember-data/model@4.11.3)(@ember-data/record-data@4.11.3)(@ember-data/tracking@4.11.3)(@ember/string@3.0.1)(@glimmer/tracking@1.1.2)(ember-source@4.11.0)(webpack@5.78.0)
       '@ember/edition-utils': 1.2.0
-      '@embroider/macros': 1.10.0
+      '@embroider/macros': 1.11.1
       ember-auto-import: 2.6.3(webpack@5.78.0)
       ember-cli-babel: 7.26.11
     transitivePeerDependencies:
+      - '@glint/template'
       - supports-color
       - webpack
     dev: true
@@ -1780,12 +1786,13 @@ packages:
       '@ember-data/private-build-infra': 4.11.3
       '@ember-data/store': 4.11.3(@babel/core@7.21.3)(@ember-data/model@4.11.3)(@ember-data/record-data@4.11.3)(@ember-data/tracking@4.11.3)(@ember/string@3.0.1)(@glimmer/tracking@1.1.2)(ember-source@4.11.0)(webpack@5.78.0)
       '@ember/string': 3.0.1
-      '@embroider/macros': 1.10.0
+      '@embroider/macros': 1.11.1
       ember-auto-import: 2.6.3(webpack@5.78.0)
       ember-cli-babel: 7.26.11
       ember-cli-test-info: 1.0.0
       ember-inflector: 4.0.2
     transitivePeerDependencies:
+      - '@glint/template'
       - supports-color
       - webpack
     dev: true
@@ -1811,13 +1818,14 @@ packages:
       '@ember-data/record-data': 4.11.3(@ember-data/store@4.11.3)(webpack@5.78.0)
       '@ember-data/tracking': 4.11.3
       '@ember/string': 3.0.1
-      '@embroider/macros': 1.10.0
+      '@embroider/macros': 1.11.1
       '@glimmer/tracking': 1.1.2
       ember-auto-import: 2.6.3(webpack@5.78.0)
       ember-cached-decorator-polyfill: 1.0.1(@babel/core@7.21.3)(ember-source@4.11.0)
       ember-cli-babel: 7.26.11
     transitivePeerDependencies:
       - '@babel/core'
+      - '@glint/template'
       - ember-source
       - supports-color
       - webpack
@@ -1951,12 +1959,12 @@ packages:
       - webpack
     dev: true
 
-  /@embroider/compat@2.1.1(@embroider/core@2.1.1):
-    resolution: {integrity: sha512-HNq5vv7NpQ1Jr+4slzmLBqsy5NDsIHilYeQiWboMrPAyHr5NHlKYWciIcmxdgPgz2kf/8D5nDiANgJznZedlyw==}
+  /@embroider/compat@3.0.2(@embroider/core@2.1.1):
+    resolution: {integrity: sha512-X94QrkZ7+m85z4exCvmYojBceclf5hQ/Lj88F2ILk1xg4OQY/1Y3y+4ilUvOTLFaGQ9Pjx7JPrzpAt0165fAlA==}
     engines: {node: 12.* || 14.* || >= 16}
     hasBin: true
     peerDependencies:
-      '@embroider/core': ^2.0.0
+      '@embroider/core': ^3.0.2
     dependencies:
       '@babel/code-frame': 7.21.4
       '@babel/core': 7.21.3(supports-color@8.1.1)
@@ -1964,10 +1972,11 @@ packages:
       '@babel/preset-env': 7.21.4(@babel/core@7.21.3)
       '@babel/traverse': 7.21.4(supports-color@8.1.1)
       '@embroider/core': 2.1.1
-      '@embroider/macros': 1.10.0
+      '@embroider/macros': 1.11.1
       '@types/babel__code-frame': 7.0.3
       '@types/yargs': 17.0.24
       assert-never: 1.2.1
+      babel-import-util: 1.3.0
       babel-plugin-ember-template-compilation: 2.0.2
       babel-plugin-syntax-dynamic-import: 6.18.0
       babylon: 6.18.0
@@ -1989,13 +1998,14 @@ packages:
       pkg-up: 3.1.0
       resolve: 1.22.2
       resolve-package-path: 4.0.3
-      semver: 7.4.0
+      semver: 7.5.1
       symlink-or-copy: 1.3.1
       tree-sync: 2.1.0
       typescript-memoize: 1.1.1
       walk-sync: 3.0.0
       yargs: 17.7.1
     transitivePeerDependencies:
+      - '@glint/template'
       - bufferutil
       - canvas
       - supports-color
@@ -2067,9 +2077,43 @@ packages:
       semver: 7.5.1
     transitivePeerDependencies:
       - supports-color
+    dev: true
+
+  /@embroider/macros@1.11.1:
+    resolution: {integrity: sha512-yg4Pl5Sw26lKrrtLwk2UEgYkKkztq+Hatn67QYL5A3I3T4IE/bRA3o6xvIslrJNnhyER7jCc2pwusxt3O4HubA==}
+    engines: {node: 12.* || 14.* || >= 16}
+    peerDependencies:
+      '@glint/template': ^1.0.0
+    peerDependenciesMeta:
+      '@glint/template':
+        optional: true
+    dependencies:
+      '@embroider/shared-internals': 2.1.0
+      assert-never: 1.2.1
+      babel-import-util: 1.3.0
+      ember-cli-babel: 7.26.11
+      find-up: 5.0.0
+      lodash: 4.17.21
+      resolve: 1.22.2
+      semver: 7.5.1
+    transitivePeerDependencies:
+      - supports-color
 
   /@embroider/shared-internals@2.0.0:
     resolution: {integrity: sha512-qZ2/xky9mWm5YC6noOa6AiAwgISEQ78YTZNv4SNu2PFgEK/H+Ha/3ddngzGSsnXkVnIHZyxIBzhxETonQYHY9g==}
+    engines: {node: 12.* || 14.* || >= 16}
+    dependencies:
+      babel-import-util: 1.3.0
+      ember-rfc176-data: 0.3.18
+      fs-extra: 9.1.0
+      js-string-escape: 1.0.1
+      lodash: 4.17.21
+      resolve-package-path: 4.0.3
+      semver: 7.5.1
+      typescript-memoize: 1.1.1
+
+  /@embroider/shared-internals@2.1.0:
+    resolution: {integrity: sha512-9hKbMxW7wDWt1BqdpnLZ5W6ETrmAg9HnfBwf1IDkT+8he5nOdTD0PNtruMjm7V0Tb9p9hI7O+UXSa8ZnX1BQXg==}
     engines: {node: 12.* || 14.* || >= 16}
     dependencies:
       babel-import-util: 1.3.0
@@ -2099,7 +2143,7 @@ packages:
       '@glint/template':
         optional: true
     dependencies:
-      '@embroider/macros': 1.10.0
+      '@embroider/macros': 1.11.1
       broccoli-funnel: 3.0.8
       ember-cli-babel: 7.26.11
       ember-source: 4.11.0(@babel/core@7.21.3)(@glimmer/component@1.1.2)(webpack@5.78.0)
@@ -3004,6 +3048,7 @@ packages:
       ember-qunit: 6.2.0(@ember/test-helpers@2.9.3)(ember-source@4.11.0)(qunit@2.19.4)(webpack@5.78.0)
     transitivePeerDependencies:
       - '@ember/test-helpers'
+      - '@glint/template'
       - ember-source
       - qunit
       - supports-color
@@ -6924,8 +6969,8 @@ packages:
       '@babel/plugin-proposal-class-properties': 7.18.6(@babel/core@7.21.3)
       '@babel/plugin-proposal-decorators': 7.21.0(@babel/core@7.21.3)
       '@babel/preset-env': 7.21.4(@babel/core@7.21.3)
-      '@embroider/macros': 1.10.0
-      '@embroider/shared-internals': 2.0.0
+      '@embroider/macros': 1.11.1
+      '@embroider/shared-internals': 2.1.0
       babel-loader: 8.3.0(@babel/core@7.21.3)(webpack@5.78.0)
       babel-plugin-ember-modules-api-polyfill: 3.5.0
       babel-plugin-ember-template-compilation: 2.0.2
@@ -6952,6 +6997,7 @@ packages:
       typescript-memoize: 1.1.1
       walk-sync: 3.0.0
     transitivePeerDependencies:
+      - '@glint/template'
       - supports-color
       - webpack
 
@@ -6974,7 +7020,7 @@ packages:
     peerDependencies:
       ember-source: ^3.13.0 || ^4.0.0
     dependencies:
-      '@embroider/macros': 1.10.0
+      '@embroider/macros': 1.11.1
       '@glimmer/tracking': 1.1.2
       babel-import-util: 1.3.0
       ember-cache-primitive-polyfill: 1.0.1(@babel/core@7.21.3)
@@ -6983,6 +7029,7 @@ packages:
       ember-source: 4.11.0(@babel/core@7.21.3)(@glimmer/component@1.1.2)(webpack@5.78.0)
     transitivePeerDependencies:
       - '@babel/core'
+      - '@glint/template'
       - supports-color
     dev: true
 
@@ -7524,6 +7571,7 @@ packages:
     transitivePeerDependencies:
       - '@babel/core'
       - '@glimmer/tracking'
+      - '@glint/template'
       - ember-source
       - supports-color
       - webpack
@@ -7647,6 +7695,7 @@ packages:
       silent-error: 1.1.1
       validate-peer-dependencies: 2.2.0
     transitivePeerDependencies:
+      - '@glint/template'
       - supports-color
       - webpack
     dev: true
@@ -7726,6 +7775,7 @@ packages:
       silent-error: 1.1.1
     transitivePeerDependencies:
       - '@babel/core'
+      - '@glint/template'
       - supports-color
       - webpack
 
@@ -15164,7 +15214,7 @@ packages:
     resolution: {integrity: sha512-nd2HUpKc6RWblPZQ2GDuI65sxJ2n/UqZwSBVtj64xlWjMx0m7ZB2m9b2JS3v1f+n9VWH/dd1CMhkHfP6pIdckA==}
     dependencies:
       resolve-package-path: 3.1.0
-      semver: 7.4.0
+      semver: 7.5.1
     dev: true
 
   /validate-peer-dependencies@2.2.0:
