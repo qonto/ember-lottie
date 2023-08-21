@@ -1,5 +1,9 @@
 lockfileVersion: '6.0'
 
+settings:
+  autoInstallPeers: true
+  excludeLinksFromLockfile: false
+
 importers:
 
   .:
@@ -72,8 +76,8 @@ importers:
         specifier: ^3.0.0
         version: 3.0.0(rollup@3.23.0)
       '@glint/core':
-        specifier: ^0.9.7
-        version: 0.9.7(typescript@4.9.5)
+        specifier: ^1.1.0
+        version: 1.1.0(typescript@4.9.5)
       '@glint/environment-ember-loose':
         specifier: ^0.9.7
         version: 0.9.7(@glimmer/component@1.1.2)
@@ -1872,7 +1876,7 @@ packages:
       npm-git-info: 1.0.3
       rimraf: 3.0.2
       rsvp: 4.8.5
-      semver: 7.5.1
+      semver: 7.5.4
       silent-error: 1.1.1
     transitivePeerDependencies:
       - supports-color
@@ -2194,7 +2198,7 @@ packages:
       find-up: 5.0.0
       lodash: 4.17.21
       resolve: 1.22.2
-      semver: 7.5.1
+      semver: 7.5.4
     transitivePeerDependencies:
       - supports-color
 
@@ -2208,7 +2212,7 @@ packages:
       js-string-escape: 1.0.1
       lodash: 4.17.21
       resolve-package-path: 4.0.3
-      semver: 7.5.1
+      semver: 7.5.4
       typescript-memoize: 1.1.1
 
   /@embroider/test-setup@2.1.1:
@@ -2447,15 +2451,16 @@ packages:
       - supports-color
     dev: true
 
-  /@glint/core@0.9.7(typescript@4.9.5):
-    resolution: {integrity: sha512-1YLHNRnuYI1dDUKWq/ue4JqiBt6TVR8e7VQJWy37CKB0tiBhWw/FPvr7/S7XbUxCt6KHO0Kl0x/eqLunu3WiQw==}
+  /@glint/core@1.1.0(typescript@4.9.5):
+    resolution: {integrity: sha512-SeAdKrQF65NRDzzmkwUC0VRZjBDysQXeIKXhyCUtXaatFDeyC0zdESJRcUykMdQoI5R6MKcts2X3gthLRuEGKA==}
     hasBin: true
     peerDependencies:
-      typescript: ^4.7.0
+      typescript: '>=4.8.0'
     dependencies:
-      '@glint/config': 0.9.7
-      '@glint/transform': 0.9.7
-      resolve: 1.22.2
+      '@glimmer/syntax': 0.84.3
+      escape-string-regexp: 4.0.0
+      semver: 7.5.4
+      silent-error: 1.1.1
       typescript: 4.9.5
       uuid: 8.3.2
       vscode-languageserver: 8.1.0
@@ -2491,15 +2496,6 @@ packages:
       '@glimmer/component': ^1.1.2
     dependencies:
       '@glimmer/component': 1.1.2(@babel/core@7.21.3)
-    dev: true
-
-  /@glint/transform@0.9.7:
-    resolution: {integrity: sha512-vd0th+Zo4cirYepASpC0fE0ZCqAcI9Y6qHYE0xi4+MY05bFRxBr7Q9ggDoWk+slynTyUrVgzCCeazAYOlZsYcg==}
-    dependencies:
-      '@glimmer/syntax': 0.84.3
-      '@glint/config': 0.9.7
-    transitivePeerDependencies:
-      - supports-color
     dev: true
 
   /@handlebars/parser@2.0.0:
@@ -2617,7 +2613,7 @@ packages:
     resolution: {integrity: sha512-8KG5RD0GVP4ydEzRn/I4BNDuxDtqVbOdm8675T49OIG/NGhaK0pjPX7ZcDlvKYbA+ulvVK3ztfcF4uBdOxuJbQ==}
     dependencies:
       '@gar/promisify': 1.1.3
-      semver: 7.5.1
+      semver: 7.5.4
     dev: true
 
   /@npmcli/move-file@1.1.2:
@@ -3716,7 +3712,7 @@ packages:
       debug: 4.3.4(supports-color@8.1.1)
       globby: 11.1.0
       is-glob: 4.0.3
-      semver: 7.5.1
+      semver: 7.5.4
       tsutils: 3.21.0(typescript@4.9.5)
       typescript: 4.9.5
     transitivePeerDependencies:
@@ -3737,7 +3733,7 @@ packages:
       debug: 4.3.4(supports-color@8.1.1)
       globby: 11.1.0
       is-glob: 4.0.3
-      semver: 7.5.1
+      semver: 7.5.4
       tsutils: 3.21.0(typescript@4.9.5)
       typescript: 4.9.5
     transitivePeerDependencies:
@@ -3758,7 +3754,7 @@ packages:
       debug: 4.3.4(supports-color@8.1.1)
       globby: 11.1.0
       is-glob: 4.0.3
-      semver: 7.5.1
+      semver: 7.5.4
       tsutils: 3.21.0(typescript@4.9.5)
       typescript: 4.9.5
     transitivePeerDependencies:
@@ -3779,7 +3775,7 @@ packages:
       '@typescript-eslint/typescript-estree': 5.56.0(typescript@4.9.5)
       eslint: 7.32.0
       eslint-scope: 5.1.1
-      semver: 7.5.1
+      semver: 7.5.4
     transitivePeerDependencies:
       - supports-color
       - typescript
@@ -3799,7 +3795,7 @@ packages:
       '@typescript-eslint/typescript-estree': 5.59.6(typescript@4.9.5)
       eslint: 8.41.0
       eslint-scope: 5.1.1
-      semver: 7.5.1
+      semver: 7.5.4
     transitivePeerDependencies:
       - supports-color
       - typescript
@@ -5733,7 +5729,7 @@ packages:
       caniuse-lite: 1.0.30001477
       isbot: 3.6.10
       object-path: 0.11.8
-      semver: 7.5.1
+      semver: 7.5.4
       ua-parser-js: 1.0.35
     dev: true
 
@@ -5781,7 +5777,7 @@ packages:
   /builtins@5.0.1:
     resolution: {integrity: sha512-qwVpFEHNfhYJIzNRBvd2C1kyo6jz3ZSMPyyuR47OPdiKWlbYnZNyDWuyR175qDnAJLiCo5fBBqPb3RiXgWlkOQ==}
     dependencies:
-      semver: 7.5.1
+      semver: 7.5.4
     dev: true
 
   /bundle-name@3.0.0:
@@ -6659,7 +6655,7 @@ packages:
       postcss-modules-values: 4.0.0(postcss@8.4.21)
       postcss-value-parser: 4.2.0
       schema-utils: 3.1.1
-      semver: 7.5.1
+      semver: 7.5.4
       webpack: 5.78.0
 
   /css-tree@1.1.3:
@@ -7077,7 +7073,7 @@ packages:
       parse5: 6.0.1
       resolve: 1.22.2
       resolve-package-path: 4.0.3
-      semver: 7.5.1
+      semver: 7.5.4
       style-loader: 2.0.0(webpack@5.78.0)
       typescript-memoize: 1.1.1
       walk-sync: 3.0.0
@@ -7205,7 +7201,7 @@ packages:
       hash-for-dep: 1.5.1
       heimdalljs-logger: 0.1.10
       json-stable-stringify: 1.0.2
-      semver: 7.5.1
+      semver: 7.5.4
       silent-error: 1.1.1
       strip-bom: 4.0.0
       walk-sync: 2.2.0
@@ -7389,7 +7385,7 @@ packages:
       fs-extra: 9.1.0
       resolve: 1.22.2
       rsvp: 4.8.5
-      semver: 7.5.1
+      semver: 7.5.4
       stagehand: 1.0.1
       walk-sync: 2.2.0
     transitivePeerDependencies:
@@ -7452,7 +7448,7 @@ packages:
     engines: {node: 10.* || >= 12.*}
     dependencies:
       resolve-package-path: 3.1.0
-      semver: 7.5.1
+      semver: 7.5.4
       silent-error: 1.1.1
     transitivePeerDependencies:
       - supports-color
@@ -7967,7 +7963,7 @@ packages:
       lodash: 4.17.21
       package-json: 6.5.0
       remote-git-tags: 3.0.0
-      semver: 7.5.1
+      semver: 7.5.4
     transitivePeerDependencies:
       - encoding
     dev: true
@@ -10018,6 +10014,7 @@ packages:
   /iconv-lite@0.6.3:
     resolution: {integrity: sha512-4fCk79wshMdzMp2rH06qWrJE4iolqLhCUH+OiuIgU++RB0+94NlDL81atO7GX55uUKueo0txHNtvEyI6D7WdMw==}
     engines: {node: '>=0.10.0'}
+    requiresBuild: true
     dependencies:
       safer-buffer: 2.1.2
     dev: true
@@ -12074,7 +12071,7 @@ packages:
     dependencies:
       growly: 1.3.0
       is-wsl: 2.2.0
-      semver: 7.5.1
+      semver: 7.5.4
       shellwords: 0.1.1
       uuid: 8.3.2
       which: 2.0.2
@@ -12132,7 +12129,7 @@ packages:
     dependencies:
       hosted-git-info: 6.1.1
       proc-log: 3.0.0
-      semver: 7.5.1
+      semver: 7.5.4
       validate-npm-package-name: 5.0.0
     dev: true
 
@@ -12562,7 +12559,7 @@ packages:
       got: 12.6.0
       registry-auth-token: 5.0.2
       registry-url: 6.0.1
-      semver: 7.5.1
+      semver: 7.5.4
     dev: true
 
   /parent-module@1.0.1:
@@ -13839,7 +13836,7 @@ packages:
     resolution: {integrity: sha512-0Ju4+6A8iOnpL/Thra7dZsSlOHYAHIeMxfhWQRI1/VLcT3WDBZKKtQt/QkBOsiIN9ZpuvHE6cGZ0x4glCMmfiA==}
     engines: {node: '>=12'}
     dependencies:
-      semver: 7.5.1
+      semver: 7.5.4
     dev: true
 
   /semver@5.7.1:
@@ -13875,6 +13872,14 @@ packages:
 
   /semver@7.5.1:
     resolution: {integrity: sha512-Wvss5ivl8TMRZXXESstBA4uR5iXgEN/VC5/sOcuXdVLzcdkz4HWetIoRfG5gb5X+ij/G9rw9YoGn3QoQ8OCSpw==}
+    engines: {node: '>=10'}
+    hasBin: true
+    dependencies:
+      lru-cache: 6.0.0
+    dev: true
+
+  /semver@7.5.4:
+    resolution: {integrity: sha512-1bCSESV6Pv+i21Hvpxp3Dx+pSD8lIPt8uVjRrxAUt/nbswYc+tK6Y2btiULjd4+fnq15PX+nqQDC7Oft7WkwcA==}
     engines: {node: '>=10'}
     hasBin: true
     dependencies:
@@ -15189,7 +15194,7 @@ packages:
       is-yarn-global: 0.3.0
       latest-version: 5.1.0
       pupa: 2.1.1
-      semver: 7.5.1
+      semver: 7.5.4
       semver-diff: 3.1.1
       xdg-basedir: 4.0.0
     dev: true
@@ -15209,7 +15214,7 @@ packages:
       is-yarn-global: 0.4.1
       latest-version: 7.0.0
       pupa: 3.1.0
-      semver: 7.5.1
+      semver: 7.5.4
       semver-diff: 4.0.0
       xdg-basedir: 5.1.0
     dev: true
@@ -15294,7 +15299,7 @@ packages:
     resolution: {integrity: sha512-nd2HUpKc6RWblPZQ2GDuI65sxJ2n/UqZwSBVtj64xlWjMx0m7ZB2m9b2JS3v1f+n9VWH/dd1CMhkHfP6pIdckA==}
     dependencies:
       resolve-package-path: 3.1.0
-      semver: 7.4.0
+      semver: 7.5.4
     dev: true
 
   /validate-peer-dependencies@2.2.0:
@@ -15302,7 +15307,7 @@ packages:
     engines: {node: '>= 12'}
     dependencies:
       resolve-package-path: 4.0.3
-      semver: 7.4.0
+      semver: 7.5.4
     dev: true
 
   /vary@1.1.2:
