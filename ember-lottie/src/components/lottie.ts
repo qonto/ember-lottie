@@ -20,6 +20,7 @@ class NotFoundError extends Error {
 
 export interface LottieArgs {
   name?: string;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   animationData?: any;
   path?: string;
   loop?: boolean;
@@ -29,7 +30,12 @@ export interface LottieArgs {
   onDataReady?: () => void;
 }
 
-export default class LottieComponent extends Component<LottieArgs> {
+export interface LottieSignature {
+  Element: HTMLElement;
+  Args: LottieArgs;
+}
+
+export default class LottieComponent extends Component<LottieSignature> {
   private animation?: AnimationItem;
   private mediaQuery = window.matchMedia?.('(prefers-reduced-motion: reduce)');
 

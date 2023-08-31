@@ -80,7 +80,7 @@ importers:
         version: 1.1.0(typescript@4.9.5)
       '@glint/environment-ember-loose':
         specifier: 1.1.0
-        version: 1.1.0(@glimmer/component@1.1.2)(@glint/template@1.1.0)(@types/ember__array@4.0.3)(@types/ember__component@4.0.14)(@types/ember__controller@4.0.4)(@types/ember__object@4.0.5)(@types/ember__routing@4.0.12)
+        version: 1.1.0(@glimmer/component@1.1.2)(@glint/template@1.1.0)(@types/ember__array@4.0.3)(@types/ember__component@4.0.14)(@types/ember__controller@4.0.4)(@types/ember__object@4.0.5)(@types/ember__routing@4.0.12)(ember-modifier@4.1.0)
       '@tsconfig/ember':
         specifier: 2.0.0
         version: 2.0.0
@@ -144,6 +144,9 @@ importers:
       concurrently:
         specifier: ^7.2.1
         version: 7.6.0
+      ember-modifier:
+        specifier: ^4.1.0
+        version: 4.1.0(ember-source@4.11.0)
       ember-template-lint:
         specifier: ^4.0.0
         version: 4.18.2
@@ -2460,7 +2463,7 @@ packages:
       - supports-color
     dev: true
 
-  /@glint/environment-ember-loose@1.1.0(@glimmer/component@1.1.2)(@glint/template@1.1.0)(@types/ember__array@4.0.3)(@types/ember__component@4.0.14)(@types/ember__controller@4.0.4)(@types/ember__object@4.0.5)(@types/ember__routing@4.0.12):
+  /@glint/environment-ember-loose@1.1.0(@glimmer/component@1.1.2)(@glint/template@1.1.0)(@types/ember__array@4.0.3)(@types/ember__component@4.0.14)(@types/ember__controller@4.0.4)(@types/ember__object@4.0.5)(@types/ember__routing@4.0.12)(ember-modifier@4.1.0):
     resolution: {integrity: sha512-Qwr3OAptRZ8zqxaPvpVBdbSiiImYMRNu+0IPQGaDutqOV80GzWYeiMuEyPC0Nwy4mQ3991YxE24Q+a5/FTfTNw==}
     peerDependencies:
       '@glimmer/component': ^1.1.2
@@ -2495,6 +2498,7 @@ packages:
       '@types/ember__controller': 4.0.4(@babel/core@7.21.3)
       '@types/ember__object': 4.0.5(@babel/core@7.21.3)
       '@types/ember__routing': 4.0.12(@babel/core@7.21.3)
+      ember-modifier: 4.1.0(ember-source@4.11.0)
     dev: true
 
   /@glint/template@1.1.0:
