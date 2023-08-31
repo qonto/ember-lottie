@@ -16,17 +16,22 @@
   "author": "",
   "files": [
     "addon-main.cjs",
+    "declarations",
     "dist"
   ],
   "scripts": {
-    "build": "rollup --config",
+    "build": "concurrently 'npm:build:*'",
+    "build:js": "rollup --config",
+    "build:types": "glint --declaration",
     "lint": "concurrently 'npm:lint:*(!fix)' --names 'lint:'",
     "lint:fix": "concurrently 'npm:lint:*:fix' --names 'fix:'",
     "lint:hbs": "ember-template-lint . --no-error-on-unmatched-pattern",
     "lint:js": "eslint . --cache",
     "lint:hbs:fix": "ember-template-lint . --fix --no-error-on-unmatched-pattern",
     "lint:js:fix": "eslint . --fix",
-    "start": "rollup --config --watch",
+    "start": "concurrently 'npm:start:*'",
+    "start:js": "rollup --config --watch --no-watch.clearScreen",
+    "start:types": "glint -d --watch",
     "test": "echo 'A v2 addon does not have tests, run tests in test-app'",
     "prepack": "rollup --config"
   },
@@ -50,6 +55,7 @@
     "@embroider/addon-dev": "^3.0.0",
     "@glint/core": "1.1.0",
     "@glint/environment-ember-loose": "1.1.0",
+    "@rollup/plugin-babel": "6.0.3",
     "@tsconfig/ember": "2.0.0",
     "@types/ember": "^4.0.0",
     "@types/ember__application": "^4.0.0",
@@ -81,7 +87,6 @@
     "prettier": "^2.5.1",
     "rollup": "3.23.0",
     "rollup-plugin-copy": "3.4.0",
-    "rollup-plugin-ts": "3.2.0",
     "typescript": "4.9.5"
   },
   "publishConfig": {
@@ -99,17 +104,20 @@
     }
   },
   "exports": {
-    ".": "./dist/index.js",
+    ".": {
+      "types": "./declarations/index.d.ts",
+      "default": "./dist/index.js"
+    },
     "./*": {
-      "types": "./dist/*.d.ts",
+      "types": "./declarations/*.d.ts",
       "default": "./dist/*.js"
     },
-    "./addon-main.js": "./addon-main.cjs"
+    "./addon-main.js": "./addon-main.js"
   },
   "typesVersions": {
     "*": {
       "*": [
-        "dist/*"
+        "declarations/*"
       ]
     }
   },
