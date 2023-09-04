@@ -28,6 +28,7 @@ export interface LottieArgs {
   speed?: number;
   containerId?: string;
   onDataReady?: () => void;
+  onError?: (error: Error) => void;
 }
 
 export interface LottieSignature {
@@ -64,6 +65,12 @@ export default class LottieComponent extends Component<LottieSignature> {
           throw new NotFoundError();
         } else {
           animationData = await response.json();
+        }
+      } catch (error) {
+        if (this.args.onError) {
+          this.args.onError(error);
+        } else {
+          throw error;
         }
       } finally {
         waiter.endAsync(token);
