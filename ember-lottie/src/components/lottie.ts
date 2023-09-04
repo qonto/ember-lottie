@@ -28,7 +28,7 @@ export interface LottieArgs {
   speed?: number;
   containerId?: string;
   onDataReady?: () => void;
-  onError?: (error: Error) => void;
+  onError?: (error: unknown) => void;
 }
 
 export interface LottieSignature {
