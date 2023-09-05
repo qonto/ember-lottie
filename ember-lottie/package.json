@@ -80,7 +80,7 @@
     "concurrently": "^7.2.1",
     "ember-modifier": "^4.1.0",
     "ember-template-lint": "^4.0.0",
-    "eslint": "^8.41.0",
+    "eslint": "^8.48.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-ember": "^10.5.8",
     "eslint-plugin-node": "^11.1.0",
