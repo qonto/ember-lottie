@@ -51,6 +51,7 @@ ember install @qonto/ember-lottie
 | speed         | number   | `1` is normal speed                                                                             |
 | containerId   | string   | the dom element id on which to render the animation (mandatory)                                 |
 | onDataReady   | function | a function that triggers the Lottie when you want it                                            |
+| onError   | function | a function that can be used as a callback when fetching the lottie file throws                                            |
 
 ## TypeScript usage
 
