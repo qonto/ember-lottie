@@ -1,3 +1,21 @@
+
+## v0.6.0 (2023-09-05)
+
+#### :rocket: Enhancement
+* [#195](https://github.com/qonto/ember-lottie/pull/195) Add option to pass an onError function to handle any lottie fetch err… ([@SkoebaSteve](https://github.com/SkoebaSteve))
+* [#194](https://github.com/qonto/ember-lottie/pull/194) Expose template registry and drop rollup-plugin-ts ([@vscav](https://github.com/vscav))
+
+#### :house: Internal
+* [#132](https://github.com/qonto/ember-lottie/pull/132) Remove unnecessary jobs in CI script ([@vscav](https://github.com/vscav))
+
+#### Committers: 5
+- Anastasia ([@anas7asia](https://github.com/anas7asia))
+- Ewan McDougall ([@mrloop](https://github.com/mrloop))
+- Steef Janssen ([@SkoebaSteve](https://github.com/SkoebaSteve))
+- Vincent Scavinner ([@vscav](https://github.com/vscav))
+- [@CYriuk](https://github.com/CYriuk)
+
+
 ## v0.5.0 (2023-04-13)
 
 #### :house: Internal
