@@ -17,6 +17,19 @@ class NotFoundError extends Error {
     Object.setPrototypeOf(this, NotFoundError.prototype);
   }
 }
+class LottieError extends Error {
+  status: number;
+  statusText: string;
+
+  constructor(status: number, statusText: string) {
+    super(statusText);
+
+    this.name = 'LottieError';
+
+    this.status = status;
+    this.statusText = statusText;
+  }
+}
 
 export interface LottieArgs {
   name?: string;
@@ -63,6 +76,8 @@ export default class LottieComponent extends Component<LottieSignature> {
 
         if (response.status === 404) {
           throw new NotFoundError();
+        } else if (!response.ok) {
+          throw new LottieError(response.status, response.statusText);
         } else {
           animationData = await response.json();
         }
