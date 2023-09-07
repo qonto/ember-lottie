@@ -1,4 +1,12 @@
 
+## v0.6.1 (2023-09-07)
+
+#### :rocket: Enhancement
+* [#196](https://github.com/qonto/ember-lottie/pull/196) throw LottieError if the fetch response is not ok ([@SkoebaSteve](https://github.com/SkoebaSteve))
+
+#### Committers: 5
+- Steef Janssen ([@SkoebaSteve](https://github.com/SkoebaSteve))
+
 ## v0.6.0 (2023-09-05)
 
 #### :rocket: Enhancement
