@@ -220,7 +220,7 @@ importers:
         specifier: ^1.1.2
         version: 1.1.2
       '@qonto/ember-lottie':
-        specifier: '*'
+        specifier: 0.6.0
         version: link:../ember-lottie
       '@release-it-plugins/lerna-changelog':
         specifier: ^5.0.0
