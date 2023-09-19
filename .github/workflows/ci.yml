@@ -46,7 +46,7 @@ jobs:
         with:
           pnpm-version: 8.5.1
           node-version: 16.x
-          no-lockfile: true
+          args: "--no-lockfile"
 
       - name: Run Tests
         run: npm run test:ember
