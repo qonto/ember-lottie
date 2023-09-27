@@ -51,11 +51,11 @@ ember install @qonto/ember-lottie
 | speed         | number   | `1` is normal speed                                                                             |
 | containerId   | string   | the dom element id on which to render the animation (mandatory)                                 |
 | onDataReady   | function | a function that triggers the Lottie when you want it                                            |
-| onError   | function | a function that can be used as a callback when fetching the lottie file throws                                            |
+| onError       | function | a function that can be used as a callback when fetching the lottie file throws                  |
 
 ## TypeScript usage
 
-The `Lottie`` component has proper [Glint](https://github.com/typed-ember/glint) types, which allow you to get strict type checking in your templates when using TypeScript.
+The `Lottie` component has proper [Glint](https://github.com/typed-ember/glint) types, which allow you to get strict type checking in your templates when using TypeScript.
 
 Unless you are using [strict mode](http://emberjs.github.io/rfcs/0496-handlebars-strict-mode.html) templates (via [first class component templates](http://emberjs.github.io/rfcs/0779-first-class-component-templates.html)),
 you need to import the addon's Glint template registry entries as described in the [Using Addons](https://typed-ember.gitbook.io/glint/using-glint/ember/using-addons#using-glint-enabled-addons) documentation:
