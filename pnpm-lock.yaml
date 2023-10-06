@@ -208,8 +208,8 @@ importers:
         specifier: ^2.1.1
         version: 2.1.1
       '@embroider/test-setup':
-        specifier: ^2.1.1
-        version: 2.1.1
+        specifier: ^3.0.2
+        version: 3.0.2(@embroider/compat@2.1.1)(@embroider/core@2.1.1)(@embroider/webpack@2.1.1)
       '@embroider/webpack':
         specifier: ^2.1.1
         version: 2.1.1(@embroider/core@2.1.1)(webpack@5.78.0)
@@ -2250,10 +2250,24 @@ packages:
     transitivePeerDependencies:
       - supports-color
 
-  /@embroider/test-setup@2.1.1:
-    resolution: {integrity: sha512-t81a2z2OEFAOZVbV7wkgiDuCyZ3ajD7J7J+keaTfNSRiXoQgeFFASEECYq1TCsH8m/R+xHMRiY59apF2FIeFhw==}
+  /@embroider/test-setup@3.0.2(@embroider/compat@2.1.1)(@embroider/core@2.1.1)(@embroider/webpack@2.1.1):
+    resolution: {integrity: sha512-cq/xp06CAB8rAGnObeJux7qALnAX2MatMVLjWyGDr3ogS5lHTNXZVCv4ltTM3pJ8EsZWpPM32dtUZqSJFkGibQ==}
     engines: {node: 12.* || 14.* || >= 16}
+    peerDependencies:
+      '@embroider/compat': ^3.2.2
+      '@embroider/core': ^3.3.0
+      '@embroider/webpack': ^3.2.0
+    peerDependenciesMeta:
+      '@embroider/compat':
+        optional: true
+      '@embroider/core':
+        optional: true
+      '@embroider/webpack':
+        optional: true
     dependencies:
+      '@embroider/compat': 2.1.1(@embroider/core@2.1.1)
+      '@embroider/core': 2.1.1
+      '@embroider/webpack': 2.1.1(@embroider/core@2.1.1)(webpack@5.78.0)
       lodash: 4.17.21
       resolve: 1.22.2
     dev: true
