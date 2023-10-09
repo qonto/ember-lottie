@@ -109,8 +109,8 @@ importers:
         specifier: ^4.0.0
         version: 4.0.4(@babel/core@7.23.0)
       '@types/ember__error':
-        specifier: ^4.0.0
-        version: 4.0.2
+        specifier: ^4.0.3
+        version: 4.0.3
       '@types/ember__object':
         specifier: ^4.0.8
         version: 4.0.8(@babel/core@7.23.0)
@@ -274,8 +274,8 @@ importers:
         specifier: ^4.0.4
         version: 4.0.4(@babel/core@7.23.0)
       '@types/ember__error':
-        specifier: ^4.0.2
-        version: 4.0.2
+        specifier: ^4.0.3
+        version: 4.0.3
       '@types/ember__object':
         specifier: ^4.0.8
         version: 4.0.8(@babel/core@7.23.0)
@@ -4255,7 +4255,7 @@ packages:
     resolution: {integrity: sha512-NROg4P4HAT6xl7WNZKrVY4qtuGkgcTg1aM7IoWgEibA0nFTHDUmtOd1/e/soT83QrZLPOaJKFgWpFGY+l8T0xA==}
     dependencies:
       '@types/ember': 4.0.3(@babel/core@7.23.0)
-      '@types/ember__error': 4.0.2
+      '@types/ember__error': 4.0.3
       '@types/ember__object': 4.0.8(@babel/core@7.23.0)
       '@types/rsvp': 4.0.4
     transitivePeerDependencies:
@@ -4332,7 +4332,7 @@ packages:
       '@types/ember__controller': 4.0.4(@babel/core@7.23.0)
       '@types/ember__debug': 4.0.4(@babel/core@7.23.0)
       '@types/ember__engine': 4.0.4(@babel/core@7.23.0)
-      '@types/ember__error': 4.0.2
+      '@types/ember__error': 4.0.3
       '@types/ember__object': 4.0.8(@babel/core@7.23.0)
       '@types/ember__polyfills': 4.0.1
       '@types/ember__routing': 4.0.12(@babel/core@7.23.0)
@@ -4416,8 +4416,8 @@ packages:
       - supports-color
     dev: true
 
-  /@types/ember__error@4.0.2:
-    resolution: {integrity: sha512-0KVIvGrpyYzO4dmBm04ovJ/Fd7DjiXABxkKX42O8U01OL6O+Q+m3euQuJbB5wkYVANnvBHpcHlxRUI2y9KmzYg==}
+  /@types/ember__error@4.0.3:
+    resolution: {integrity: sha512-lQ/ZrPS5s7LjYhML8TCfcKyMumAy7Hh+9CI66WShHumuojSZZm36LhpaUXC0sMf5uF3uKimaVrvvvrvBLDePZg==}
     dev: true
 
   /@types/ember__object@4.0.8(@babel/core@7.23.0):
@@ -8259,7 +8259,6 @@ packages:
       - '@glint/template'
       - supports-color
       - webpack
-    dev: false
 
   /ember-auto-import@2.6.3(webpack@5.78.0):
     resolution: {integrity: sha512-uLhrRDJYWCRvQ4JQ1e64XlSrqAKSd6PXaJ9ZsZI6Tlms9T4DtQFxNXasqji2ZRJBVrxEoLCRYX3RTldsQ0vNGQ==}
@@ -8982,7 +8981,7 @@ packages:
       '@embroider/addon-shim': 1.8.4
       ember-cli-normalize-entity-name: 1.0.0
       ember-cli-string-utils: 1.1.0
-      ember-source: 5.3.0(@babel/core@7.23.0)(@glimmer/component@1.1.2)(rsvp@4.8.5)(webpack@5.78.0)
+      ember-source: 5.3.0(@babel/core@7.23.0)(@glimmer/component@1.1.2)(@glint/template@1.2.1)(rsvp@4.8.5)(webpack@5.78.0)
     transitivePeerDependencies:
       - supports-color
     dev: true
@@ -9111,7 +9110,6 @@ packages:
       - rsvp
       - supports-color
       - webpack
-    dev: false
 
   /ember-source@5.3.0(@babel/core@7.23.0)(@glimmer/component@1.1.2)(rsvp@4.8.5)(webpack@5.78.0):
     resolution: {integrity: sha512-MnsPEYo2gArYzlY0uu5bBH60oNYcgcayYQEd27nJumuaceN1sMLMu1jGQmjiQzZ4b6U5edEUNQbCIZ/9TXbASw==}
