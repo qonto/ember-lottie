@@ -76,8 +76,8 @@ importers:
         specifier: ^3.0.0
         version: 3.0.0(rollup@3.23.0)
       '@glint/core':
-        specifier: 1.1.0
-        version: 1.1.0(typescript@5.2.2)
+        specifier: 1.2.1
+        version: 1.2.1(typescript@5.2.2)
       '@glint/environment-ember-loose':
         specifier: 1.2.1
         version: 1.2.1(@glimmer/component@1.1.2)(@glint/template@1.2.1)(@types/ember__array@4.0.3)(@types/ember__component@4.0.14)(@types/ember__controller@4.0.4)(@types/ember__object@4.0.8)(@types/ember__routing@4.0.12)(ember-modifier@4.1.0)
@@ -2630,8 +2630,8 @@ packages:
       '@glimmer/interfaces': 0.84.2
       '@glimmer/util': 0.84.2
 
-  /@glint/core@1.1.0(typescript@5.2.2):
-    resolution: {integrity: sha512-SeAdKrQF65NRDzzmkwUC0VRZjBDysQXeIKXhyCUtXaatFDeyC0zdESJRcUykMdQoI5R6MKcts2X3gthLRuEGKA==}
+  /@glint/core@1.2.1(typescript@5.2.2):
+    resolution: {integrity: sha512-25Zn65aLSN1M7s0D950sTNElZYRqa6HFA0xcT03iI/vQd1F6c3luMAXbFrsTSHlktZx2dqJ38c2dUnZJQBQgMw==}
     hasBin: true
     peerDependencies:
       typescript: '>=4.8.0'
@@ -2644,7 +2644,7 @@ packages:
       uuid: 8.3.2
       vscode-languageserver: 8.1.0
       vscode-languageserver-textdocument: 1.0.8
-      vscode-uri: 3.0.7
+      vscode-uri: 3.0.8
       yargs: 17.7.1
     transitivePeerDependencies:
       - supports-color
@@ -15047,8 +15047,8 @@ packages:
       vscode-languageserver-protocol: 3.17.3
     dev: true
 
-  /vscode-uri@3.0.7:
-    resolution: {integrity: sha512-eOpPHogvorZRobNqJGhapa0JdwaxpjVvyBp0QIUMRMSf8ZAlqOdEquKuRmw9Qwu0qXtJIWqFtMkmvJjUZmMjVA==}
+  /vscode-uri@3.0.8:
+    resolution: {integrity: sha512-AyFQ0EVmsOZOlAnxoFOGOq1SQDWAB7C6aqMGS23svWAllfOaxbuFvcT8D1i8z3Gyn8fraVeZNNmN6e9bxxXkKw==}
     dev: true
 
   /w3c-hr-time@1.0.2:
