@@ -40,7 +40,7 @@
     "@qonto/ember-lottie": "0.6.1",
     "@release-it-plugins/lerna-changelog": "^5.0.0",
     "@tsconfig/ember": "^2.0.0",
-    "@types/ember": "^4.0.3",
+    "@types/ember": "^4.0.6",
     "@types/ember-data": "^4.4.8",
     "@types/ember-data__adapter": "^4.0.1",
     "@types/ember-data__model": "^4.0.1",
