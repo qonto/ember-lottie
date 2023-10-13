@@ -8,6 +8,8 @@
     "environment": "ember-loose"
   },
   "compilerOptions": {
-    "declarationDir": "declarations"
+    "allowJs": false,
+    "declarationDir": "declarations",
+    "skipLibCheck": true,
   }
 }
