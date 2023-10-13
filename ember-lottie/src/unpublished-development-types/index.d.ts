@@ -9,7 +9,7 @@ import 'ember-source/types';
 import 'ember-source/types/preview';
 
 declare class RenderModifier<
-  Args extends Array<unknown> = Array<unknown>
+  Args extends Array<unknown> = Array<unknown>,
 > extends Modifier<{
   Element: HTMLElement;
   Args: { Positional: [(element: HTMLElement, args: Args) => void, ...Args] };
