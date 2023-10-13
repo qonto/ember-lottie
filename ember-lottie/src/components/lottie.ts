@@ -115,7 +115,7 @@ export default class LottieComponent extends Component<LottieSignature> {
 
     this.mediaQuery?.addEventListener(
       'change',
-      this.handleReducedMotionPreferenceChange
+      this.handleReducedMotionPreferenceChange,
     );
   }
 
@@ -124,7 +124,7 @@ export default class LottieComponent extends Component<LottieSignature> {
 
     this.mediaQuery?.removeEventListener(
       'change',
-      this.handleReducedMotionPreferenceChange
+      this.handleReducedMotionPreferenceChange,
     );
 
     if (this.animation) {

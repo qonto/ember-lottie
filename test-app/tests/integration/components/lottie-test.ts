@@ -91,7 +91,7 @@ module('Integration | Component | lottie', function (hooks) {
     assert.true(removeEventListener.calledOnce);
   });
 
-  test('it should not autoplay the animation when prefers-reduced-motion is enabled', async function (this: TestContext, assert: any) {
+  test('it should not autoplay the animation when prefers-reduced-motion is enabled', async function (this: TestContext, assert) {
     window.matchMedia = () => {
       return {
         addEventListener: () => {
@@ -115,7 +115,7 @@ module('Integration | Component | lottie', function (hooks) {
     assert.dom('[data-test-autoplay=false]').exists();
   });
 
-  test('it should not autoplay the animation when autoplay is false', async function (this: TestContext, assert: any) {
+  test('it should not autoplay the animation when autoplay is false', async function (this: TestContext, assert) {
     window.matchMedia = () => {
       return {
         addEventListener: () => {
@@ -139,7 +139,7 @@ module('Integration | Component | lottie', function (hooks) {
     assert.dom('[data-test-autoplay=false]').exists();
   });
 
-  test('it should autoplay the animation when prefers-reduced-motion is disabled', async function (this: TestContext, assert: any) {
+  test('it should autoplay the animation when prefers-reduced-motion is disabled', async function (this: TestContext, assert) {
     window.matchMedia = () => {
       return {
         addEventListener: () => {
@@ -163,7 +163,7 @@ module('Integration | Component | lottie', function (hooks) {
     assert.dom('[data-test-autoplay=true]').exists();
   });
 
-  test('it should autoplay the animation by default when prefers-reduced-motion is disabled', async function (this: TestContext, assert: any) {
+  test('it should autoplay the animation by default when prefers-reduced-motion is disabled', async function (this: TestContext, assert) {
     window.matchMedia = () => {
       return {
         addEventListener: () => {
@@ -186,7 +186,7 @@ module('Integration | Component | lottie', function (hooks) {
     assert.dom('[data-test-autoplay=true]').exists();
   });
 
-  test('it should not call document.querySelector when containerId is undefined or null', async function (this: TestContext, assert: any) {
+  test('it should not call document.querySelector when containerId is undefined or null', async function (this: TestContext, assert) {
     const querySelector = sinon.spy();
     document.querySelector = querySelector;
     await render(hbs`
@@ -207,7 +207,7 @@ module('Integration | Component | lottie', function (hooks) {
     assert.false(querySelector.calledOnce);
   });
 
-  test('it should call document.querySelector when containerId is not falsy', async function (this: TestContext, assert: any) {
+  test('it should call document.querySelector when containerId is not falsy', async function (this: TestContext, assert) {
     const querySelector = sinon.spy();
     document.querySelector = querySelector;
     await render(hbs`
