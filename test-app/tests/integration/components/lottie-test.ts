@@ -4,15 +4,15 @@ import { clearRender, find, render } from '@ember/test-helpers';
 import { hbs } from 'ember-cli-htmlbars';
 import type { TestContext as TestContextBase } from '@ember/test-helpers';
 
-import type { LottieArgs } from '@qonto/ember-lottie/components/lottie';
-
 import window from 'ember-window-mock';
 import { setupWindowMock } from 'ember-window-mock/test-support';
 import * as sinon from 'sinon';
 
 interface TestContext extends TestContextBase {
-  args: LottieArgs;
+  onDataReady: () => void;
 }
+
+const NOOP = (): void => {};
 
 module('Integration | Component | lottie', function (hooks) {
   setupRenderingTest(hooks);
@@ -22,11 +22,7 @@ module('Integration | Component | lottie', function (hooks) {
     document.querySelector;
 
   hooks.beforeEach(function (this: TestContext) {
-    this.args = {
-      onDataReady: (): void => {
-        /* noop */
-      },
-    };
+    this.onDataReady = NOOP;
   });
 
   hooks.afterEach(function () {
@@ -34,12 +30,12 @@ module('Integration | Component | lottie', function (hooks) {
   });
 
   test('it renders', async function (this: TestContext, assert) {
-    this.args.onDataReady = (): void => assert.step('data ready called');
+    this.onDataReady = (): void => assert.step('data ready called');
 
-    await render(hbs`
+    await render<TestContext>(hbs`
       <Lottie
         @path="/data.json"
-        @onDataReady={{this.args.onDataReady}}
+        @onDataReady={{this.onDataReady}}
       />
     `);
 
@@ -57,7 +53,7 @@ module('Integration | Component | lottie', function (hooks) {
       } as unknown as MediaQueryList;
     };
 
-    await render(hbs`
+    await render<TestContext>(hbs`
       <Lottie
         @path="/data.json"
       />
@@ -67,7 +63,7 @@ module('Integration | Component | lottie', function (hooks) {
     assert.verifySteps([`matchMedia((prefers-reduced-motion: reduce))`]);
   });
 
-  test('it should listen for changes to prefers-reduced-motion and cleanup the listener when destroyed', async function (this: TestContext, assert) {
+  test('it listens for changes to prefers-reduced-motion and cleanup the listener when destroyed', async function (this: TestContext, assert) {
     const addEventListener = sinon.spy();
     const removeEventListener = sinon.spy();
     window.matchMedia = (): MediaQueryList => {
@@ -78,7 +74,7 @@ module('Integration | Component | lottie', function (hooks) {
       } as unknown as MediaQueryList;
     };
 
-    await render(hbs`
+    await render<TestContext>(hbs`
       <Lottie
         @path="/data.json"
       />
@@ -91,20 +87,16 @@ module('Integration | Component | lottie', function (hooks) {
     assert.true(removeEventListener.calledOnce);
   });
 
-  test('it should not autoplay the animation when prefers-reduced-motion is enabled', async function (this: TestContext, assert) {
+  test('it does not autoplay the animation when prefers-reduced-motion is enabled', async function (this: TestContext, assert) {
     window.matchMedia = (): MediaQueryList => {
       return {
-        addEventListener: () => {
-          /** noop */
-        },
-        removeEventListener: () => {
-          /** noop */
-        },
+        addEventListener: NOOP,
+        removeEventListener: NOOP,
         matches: true,
       } as unknown as MediaQueryList;
     };
 
-    await render(hbs`
+    await render<TestContext>(hbs`
       <Lottie
         @path="/data.json"
         @autoplay={{true}}
@@ -115,20 +107,16 @@ module('Integration | Component | lottie', function (hooks) {
     assert.dom('[data-test-autoplay=false]').exists();
   });
 
-  test('it should not autoplay the animation when autoplay is false', async function (this: TestContext, assert) {
+  test('it does not autoplay the animation when autoplay is false', async function (this: TestContext, assert) {
     window.matchMedia = (): MediaQueryList => {
       return {
-        addEventListener: () => {
-          /** noop */
-        },
-        removeEventListener: () => {
-          /** noop */
-        },
+        addEventListener: NOOP,
+        removeEventListener: NOOP,
         matches: false,
       } as unknown as MediaQueryList;
     };
 
-    await render(hbs`
+    await render<TestContext>(hbs`
       <Lottie
         @path="/data.json"
         @autoplay={{false}}
@@ -139,20 +127,16 @@ module('Integration | Component | lottie', function (hooks) {
     assert.dom('[data-test-autoplay=false]').exists();
   });
 
-  test('it should autoplay the animation when prefers-reduced-motion is disabled', async function (this: TestContext, assert) {
+  test('it autoplays the animation when prefers-reduced-motion is disabled', async function (this: TestContext, assert) {
     window.matchMedia = (): MediaQueryList => {
       return {
-        addEventListener: () => {
-          /** noop */
-        },
-        removeEventListener: () => {
-          /** noop */
-        },
+        addEventListener: NOOP,
+        removeEventListener: NOOP,
         matches: false,
       } as unknown as MediaQueryList;
     };
 
-    await render(hbs`
+    await render<TestContext>(hbs`
       <Lottie
         @path="/data.json"
         @autoplay={{true}}
@@ -163,20 +147,16 @@ module('Integration | Component | lottie', function (hooks) {
     assert.dom('[data-test-autoplay=true]').exists();
   });
 
-  test('it should autoplay the animation by default when prefers-reduced-motion is disabled', async function (this: TestContext, assert) {
+  test('it autoplays the animation by default when prefers-reduced-motion is disabled', async function (this: TestContext, assert) {
     window.matchMedia = (): MediaQueryList => {
       return {
-        addEventListener: () => {
-          /** noop */
-        },
-        removeEventListener: () => {
-          /** noop */
-        },
+        addEventListener: NOOP,
+        removeEventListener: NOOP,
         matches: false,
       } as unknown as MediaQueryList;
     };
 
-    await render(hbs`
+    await render<TestContext>(hbs`
       <Lottie
         @path="/data.json"
       />
@@ -186,10 +166,10 @@ module('Integration | Component | lottie', function (hooks) {
     assert.dom('[data-test-autoplay=true]').exists();
   });
 
-  test('it should not call document.querySelector when containerId is undefined or null', async function (this: TestContext, assert) {
+  test('it does not call document.querySelector when containerId is undefined', async function (this: TestContext, assert) {
     const querySelector = sinon.spy();
     document.querySelector = querySelector;
-    await render(hbs`
+    await render<TestContext>(hbs`
       <Lottie
         @path="/data.json"
       />
@@ -197,20 +177,20 @@ module('Integration | Component | lottie', function (hooks) {
 
     assert.false(querySelector.calledOnce);
 
-    await render(hbs`
+    await render<TestContext>(hbs`
       <Lottie
         @path="/data.json"
-        @containerId={{null}}
+        @containerId={{undefined}}
       />
     `);
 
     assert.false(querySelector.calledOnce);
   });
 
-  test('it should call document.querySelector when containerId is not falsy', async function (this: TestContext, assert) {
+  test('it calls document.querySelector when containerId is not falsy', async function (this: TestContext, assert) {
     const querySelector = sinon.spy();
     document.querySelector = querySelector;
-    await render(hbs`
+    await render<TestContext>(hbs`
       <Lottie
         @path="/data.json"
         @containerId='this-is-an-id'
