@@ -34,7 +34,7 @@ module('Integration | Component | lottie', function (hooks) {
   });
 
   test('it renders', async function (this: TestContext, assert) {
-    this.args.onDataReady = () => assert.step('data ready called');
+    this.args.onDataReady = (): void => assert.step('data ready called');
 
     await render(hbs`
       <Lottie
@@ -48,7 +48,7 @@ module('Integration | Component | lottie', function (hooks) {
   });
 
   test('it calls window.matchMedia to check for prefers-reduced-motion', async function (this: TestContext, assert) {
-    window.matchMedia = (mediaQuery) => {
+    window.matchMedia = (mediaQuery): MediaQueryList => {
       assert.step(`matchMedia(${mediaQuery})`);
       return {
         addEventListener: sinon.spy(),
@@ -70,7 +70,7 @@ module('Integration | Component | lottie', function (hooks) {
   test('it should listen for changes to prefers-reduced-motion and cleanup the listener when destroyed', async function (this: TestContext, assert) {
     const addEventListener = sinon.spy();
     const removeEventListener = sinon.spy();
-    window.matchMedia = () => {
+    window.matchMedia = (): MediaQueryList => {
       return {
         addEventListener,
         removeEventListener,
@@ -92,7 +92,7 @@ module('Integration | Component | lottie', function (hooks) {
   });
 
   test('it should not autoplay the animation when prefers-reduced-motion is enabled', async function (this: TestContext, assert) {
-    window.matchMedia = () => {
+    window.matchMedia = (): MediaQueryList => {
       return {
         addEventListener: () => {
           /** noop */
@@ -116,7 +116,7 @@ module('Integration | Component | lottie', function (hooks) {
   });
 
   test('it should not autoplay the animation when autoplay is false', async function (this: TestContext, assert) {
-    window.matchMedia = () => {
+    window.matchMedia = (): MediaQueryList => {
       return {
         addEventListener: () => {
           /** noop */
@@ -140,7 +140,7 @@ module('Integration | Component | lottie', function (hooks) {
   });
 
   test('it should autoplay the animation when prefers-reduced-motion is disabled', async function (this: TestContext, assert) {
-    window.matchMedia = () => {
+    window.matchMedia = (): MediaQueryList => {
       return {
         addEventListener: () => {
           /** noop */
@@ -164,7 +164,7 @@ module('Integration | Component | lottie', function (hooks) {
   });
 
   test('it should autoplay the animation by default when prefers-reduced-motion is disabled', async function (this: TestContext, assert) {
-    window.matchMedia = () => {
+    window.matchMedia = (): MediaQueryList => {
       return {
         addEventListener: () => {
           /** noop */

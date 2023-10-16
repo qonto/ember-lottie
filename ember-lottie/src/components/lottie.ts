@@ -3,7 +3,7 @@ import { action } from '@ember/object';
 import { buildWaiter } from '@ember/test-waiters';
 import Ember from 'ember';
 
-import { AnimationItem, LottiePlayer } from 'lottie-web';
+import type { AnimationItem, LottiePlayer } from 'lottie-web';
 import window from 'ember-window-mock';
 
 const waiter = buildWaiter('ember-lottie:lottie-waiter');
@@ -53,11 +53,11 @@ export default class LottieComponent extends Component<LottieSignature> {
   private animation?: AnimationItem;
   private mediaQuery = window.matchMedia?.('(prefers-reduced-motion: reduce)');
 
-  get autoplay() {
+  get autoplay(): boolean {
     return this.canAutoplay ?? true;
   }
 
-  get canAutoplay() {
+  get canAutoplay(): boolean | undefined {
     const prefersReducedMotion = this.mediaQuery?.matches;
     return !prefersReducedMotion && this.args.autoplay;
   }
@@ -119,7 +119,15 @@ export default class LottieComponent extends Component<LottieSignature> {
     );
   }
 
-  willDestroy() {
+  @action
+  private handleReducedMotionPreferenceChange(): void {
+    const prefersReducedMotion = this.mediaQuery?.matches;
+    if (prefersReducedMotion) {
+      this.animation?.stop();
+    }
+  }
+
+  willDestroy(): void {
     super.willDestroy();
 
     this.mediaQuery?.removeEventListener(
@@ -129,14 +137,6 @@ export default class LottieComponent extends Component<LottieSignature> {
 
     if (this.animation) {
       this.animation.destroy();
-    }
-  }
-
-  @action
-  private handleReducedMotionPreferenceChange() {
-    const prefersReducedMotion = this.mediaQuery?.matches;
-    if (prefersReducedMotion) {
-      this.animation?.stop();
     }
   }
 
