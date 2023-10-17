@@ -41,8 +41,8 @@ ember install @qonto/ember-lottie
 
 ### Arguments
 
-| Argument      | Type     | Description                                                                                     |     | Example |
-| ------------- | -------- | ----------------------------------------------------------------------------------------------- | --- | ------- |
+| Argument      | Type     | Description                                                                                     |
+| ------------- | -------- | ----------------------------------------------------------------------------------------------- |
 | name          | string   | animation name for future reference                                                             |
 | animationData | object   | an object with the exported animation data (mandatory at least one: `animationData` or `path`)  |
 | path          | string   | the relative path to the animation object (mandatory at least one: `animationData` or `path`)   |
