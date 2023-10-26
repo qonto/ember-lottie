@@ -73,8 +73,8 @@ importers:
         specifier: ^7.22.5
         version: 7.22.5
       '@embroider/addon-dev':
-        specifier: ^3.0.0
-        version: 3.0.0(rollup@3.23.0)
+        specifier: ^4.1.1
+        version: 4.1.1(@glint/template@1.2.1)(rollup@3.23.0)
       '@glint/core':
         specifier: 1.2.1
         version: 1.2.1(typescript@5.2.2)
@@ -1549,13 +1549,13 @@ packages:
     engines: {node: '>=6.9.0'}
     dependencies:
       regenerator-runtime: 0.13.11
+    dev: true
 
   /@babel/runtime@7.23.2:
     resolution: {integrity: sha512-mM8eg4yl5D6i3lu2QKPuPH4FArvJ8KhTofbE7jwMUv9KX5mBvwPAqnV3MlyBNqdp9RyRKP6Yck8TrfYrPvX3bg==}
     engines: {node: '>=6.9.0'}
     dependencies:
       regenerator-runtime: 0.14.0
-    dev: true
 
   /@babel/template@7.22.15:
     resolution: {integrity: sha512-QPErUVm4uyJa60rkI73qneDacvdvzxshT3kksGqlGWYdOTIUOwJ7RDUL8sGqslY1uXWSL6xMFKEXDS3ox2uF0w==}
@@ -1683,14 +1683,14 @@ packages:
     transitivePeerDependencies:
       - supports-color
 
-  /@embroider/addon-dev@3.0.0(rollup@3.23.0):
-    resolution: {integrity: sha512-h3ISDdp8LASA6583WC3IU3ECZ5fHlW3V3EkgpEeeH7KhxTerHjDjNf+S6+ZvPH+ZHi3WOCYPvUA5OfNICyMbtA==}
+  /@embroider/addon-dev@4.1.1(@glint/template@1.2.1)(rollup@3.23.0):
+    resolution: {integrity: sha512-6AIU+GobgsozQJZtG6ys/8TumtnJkrW8LKggjajCwX8QP++eAN9vUL00AZdgh5wZAyLAiv+jNi5knGrPdMFPMA==}
     engines: {node: 12.* || 14.* || >= 16}
     hasBin: true
     dependencies:
-      '@embroider/core': 2.1.1
+      '@embroider/core': 3.3.0(@glint/template@1.2.1)
       '@rollup/pluginutils': 4.2.1
-      assert-never: 1.2.1
+      content-tag: 1.1.2
       fs-extra: 10.1.0
       minimatch: 3.1.2
       rollup-plugin-copy-assets: 2.0.3(rollup@3.23.0)
@@ -1698,6 +1698,7 @@ packages:
       walk-sync: 3.0.0
       yargs: 17.7.2
     transitivePeerDependencies:
+      - '@glint/template'
       - bufferutil
       - canvas
       - rollup
@@ -1715,29 +1716,24 @@ packages:
     transitivePeerDependencies:
       - supports-color
 
-  /@embroider/core@2.1.1:
-    resolution: {integrity: sha512-N4rz+r8WjHYmwprvBYC0iUT4EWNpdDjF7JLl8PEYlWbhXDEJL+Ma/aP78S7spMhIpJX9SHK7nbgNxmZAqAe34A==}
+  /@embroider/core@3.3.0(@glint/template@1.2.1):
+    resolution: {integrity: sha512-QkOLFB3DUuDg6DU7qNAKFNJUyzgmjWNiRLcyrhThYgWeN5h8ilatG3sl5atBN6Jh3wCIJmhjXagafkA82a0abQ==}
     engines: {node: 12.* || 14.* || >= 16}
     dependencies:
       '@babel/core': 7.23.0
       '@babel/parser': 7.23.0
-      '@babel/plugin-syntax-dynamic-import': 7.8.3(@babel/core@7.23.0)
-      '@babel/plugin-transform-runtime': 7.23.2(@babel/core@7.23.0)
-      '@babel/runtime': 7.22.5
       '@babel/traverse': 7.23.2
-      '@embroider/macros': 1.10.0
-      '@embroider/shared-internals': 2.0.0
+      '@embroider/macros': 1.13.2(@glint/template@1.2.1)
+      '@embroider/shared-internals': 2.5.0
       assert-never: 1.2.1
-      babel-import-util: 1.4.1
       babel-plugin-ember-template-compilation: 2.2.0
       broccoli-node-api: 1.7.0
       broccoli-persistent-filter: 3.1.3
       broccoli-plugin: 4.0.7
       broccoli-source: 3.0.1
       debug: 4.3.4
-      escape-string-regexp: 4.0.0
       fast-sourcemap-concat: 1.4.0
-      filesize: 5.0.3
+      filesize: 10.1.0
       fs-extra: 9.1.0
       fs-tree-diff: 2.0.1
       handlebars: 4.7.8
@@ -1749,26 +1745,11 @@ packages:
       typescript-memoize: 1.1.1
       walk-sync: 3.0.0
     transitivePeerDependencies:
+      - '@glint/template'
       - bufferutil
       - canvas
       - supports-color
       - utf-8-validate
-    dev: true
-
-  /@embroider/macros@1.10.0:
-    resolution: {integrity: sha512-LMbfQGk/a+f6xtvAv5fq/wf2LRxETnbgSCLUf/z6ebzmuskOUxrke+uP55chF/loWrARi9g6erFQ7RDOUoBMSg==}
-    engines: {node: 12.* || 14.* || >= 16}
-    dependencies:
-      '@embroider/shared-internals': 2.0.0
-      assert-never: 1.2.1
-      babel-import-util: 1.4.1
-      ember-cli-babel: 7.26.11
-      find-up: 5.0.0
-      lodash: 4.17.21
-      resolve: 1.22.8
-      semver: 7.5.4
-    transitivePeerDependencies:
-      - supports-color
     dev: true
 
   /@embroider/macros@1.13.2(@glint/template@1.2.1):
@@ -1791,20 +1772,6 @@ packages:
       semver: 7.5.4
     transitivePeerDependencies:
       - supports-color
-
-  /@embroider/shared-internals@2.0.0:
-    resolution: {integrity: sha512-qZ2/xky9mWm5YC6noOa6AiAwgISEQ78YTZNv4SNu2PFgEK/H+Ha/3ddngzGSsnXkVnIHZyxIBzhxETonQYHY9g==}
-    engines: {node: 12.* || 14.* || >= 16}
-    dependencies:
-      babel-import-util: 1.4.1
-      ember-rfc176-data: 0.3.18
-      fs-extra: 9.1.0
-      js-string-escape: 1.0.1
-      lodash: 4.17.21
-      resolve-package-path: 4.0.3
-      semver: 7.5.4
-      typescript-memoize: 1.1.1
-    dev: true
 
   /@embroider/shared-internals@2.4.0:
     resolution: {integrity: sha512-pFE05ebenWMC9XAPRjadYCXXb6VmqjkhYN5uqkhPo+VUmMHnx7sZYYxqGjxfVuhC/ghS/BNlOffOCXDOoE7k7g==}
@@ -3681,11 +3648,6 @@ packages:
     engines: {node: '>= 12.*'}
     dev: true
 
-  /babel-import-util@1.4.1:
-    resolution: {integrity: sha512-TNdiTQdPhXlx02pzG//UyVPSKE7SNWjY0n4So/ZnjQpWwaM5LvWBLkWa1JKll5u06HNscHD91XZPuwrMg1kadQ==}
-    engines: {node: '>= 12.*'}
-    dev: true
-
   /babel-import-util@2.0.1:
     resolution: {integrity: sha512-N1ZfNprtf/37x0R05J0QCW/9pCAcuI+bjZIK9tlu0JEkwEST7ssdD++gxHRbD58AiG5QE5OuNYhRoEFsc1wESw==}
     engines: {node: '>= 12.*'}
@@ -3952,7 +3914,7 @@ packages:
     dependencies:
       ansi-align: 3.0.1
       camelcase: 7.0.1
-      chalk: 5.2.0
+      chalk: 5.3.0
       cli-boxes: 3.0.0
       string-width: 5.1.2
       type-fest: 2.19.0
@@ -5271,6 +5233,10 @@ packages:
     engines: {node: '>= 0.6'}
     dependencies:
       safe-buffer: 5.2.1
+    dev: true
+
+  /content-tag@1.1.2:
+    resolution: {integrity: sha512-AZkfc6TUmW+/RbZJioPzOQPAHHXqyqK4B0GNckJDjBAPK3SyGrMfn21bfFky/qwi5uoLph5sjAHUkO3CL6/IgQ==}
     dev: true
 
   /content-type@1.0.5:
@@ -7481,11 +7447,6 @@ packages:
     engines: {node: '>= 10.4.0'}
     dev: true
 
-  /filesize@5.0.3:
-    resolution: {integrity: sha512-RM123v6KPqgZJmVCh4rLvCo8tLKr4sgD92DeZ+AuoUE8teGZJHKs1cTORwETcpIJSlGsz2WYdwKDQUXby5hNqQ==}
-    engines: {node: '>= 0.4.0'}
-    dev: true
-
   /fill-range@4.0.0:
     resolution: {integrity: sha512-VcpLTWqWDiTerugjj8e3+esbg+skS3M9e54UuR3iCeIDMXCLTsAH8hTSzDQU/X6/6t3eYkOKoZSef2PlU6U1XQ==}
     engines: {node: '>=0.10.0'}
@@ -8680,7 +8641,7 @@ packages:
     engines: {node: '>=14.18.0'}
     dependencies:
       ansi-escapes: 4.3.2
-      chalk: 5.2.0
+      chalk: 5.3.0
       cli-cursor: 3.1.0
       cli-width: 4.1.0
       external-editor: 3.1.0
@@ -9677,7 +9638,7 @@ packages:
     resolution: {integrity: sha512-l0x2DvrW294C9uDCoQe1VSU4gf529FkSZ6leBl4TiqZH/e+0R7hSfHQBNut2mNygDgHwvYHfFLn6Oxb3VWj2rA==}
     engines: {node: '>=12'}
     dependencies:
-      chalk: 5.2.0
+      chalk: 5.3.0
       is-unicode-supported: 1.3.0
     dev: true
 
@@ -10703,7 +10664,7 @@ packages:
     resolution: {integrity: sha512-ERAyNnZOfqM+Ao3RAvIXkYh5joP220yf59gVe2X/cI6SiCxIdi4c9HZKZD8R6q/RDXEje1THBju6iExiSsgJaQ==}
     engines: {node: ^12.20.0 || ^14.13.1 || >=16.0.0}
     dependencies:
-      chalk: 5.2.0
+      chalk: 5.3.0
       cli-cursor: 4.0.0
       cli-spinners: 2.9.1
       is-interactive: 2.0.0
@@ -10901,7 +10862,7 @@ packages:
       got: 12.6.1
       registry-auth-token: 5.0.2
       registry-url: 6.0.1
-      semver: 7.5.1
+      semver: 7.5.4
     dev: true
 
   /parent-module@1.0.1:
@@ -11461,12 +11422,11 @@ packages:
 
   /regenerator-runtime@0.14.0:
     resolution: {integrity: sha512-srw17NI0TUWHuGa5CFGGmhfNIeja30WMBfbslPNhf6JrqQlLN5gcrvig1oqPxiVaXb0oW0XRKtH6Nngs5lKCIA==}
-    dev: true
 
   /regenerator-transform@0.15.2:
     resolution: {integrity: sha512-hfMp2BoF0qOk3uc5V20ALGDS2ddjQaLrdl7xrGXvAIow7qeWRM2VA2HuCHkUKk9slq3VwEwLNK3DFBqDfPGYtg==}
     dependencies:
-      '@babel/runtime': 7.22.5
+      '@babel/runtime': 7.23.2
 
   /regex-not@1.0.2:
     resolution: {integrity: sha512-J6SDjUgDxQj5NusnOtdFxDwN/+HWykR8GELwctJ7mdqhcyy1xEc4SRFHUXvxTp661YaVKAjfRLZ9cCqS6tn32A==}
@@ -12012,7 +11972,7 @@ packages:
     resolution: {integrity: sha512-0Ju4+6A8iOnpL/Thra7dZsSlOHYAHIeMxfhWQRI1/VLcT3WDBZKKtQt/QkBOsiIN9ZpuvHE6cGZ0x4glCMmfiA==}
     engines: {node: '>=12'}
     dependencies:
-      semver: 7.5.1
+      semver: 7.5.4
     dev: true
 
   /semver@5.7.2:
@@ -13317,7 +13277,7 @@ packages:
     engines: {node: '>=14.16'}
     dependencies:
       boxen: 7.1.1
-      chalk: 5.2.0
+      chalk: 5.3.0
       configstore: 6.0.0
       has-yarn: 3.0.0
       import-lazy: 4.0.0
@@ -13327,7 +13287,7 @@ packages:
       is-yarn-global: 0.4.1
       latest-version: 7.0.0
       pupa: 3.1.0
-      semver: 7.5.1
+      semver: 7.5.4
       semver-diff: 4.0.0
       xdg-basedir: 5.1.0
     dev: true
