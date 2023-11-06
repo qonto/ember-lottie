@@ -43,7 +43,7 @@
     "@types/htmlbars-inline-precompile": "^3.0.0",
     "@types/qunit": "^2.19.4",
     "@types/rsvp": "^4.0.6",
-    "@types/sinon": "^10.0.19",
+    "@types/sinon": "^17.0.0",
     "@typescript-eslint/eslint-plugin": "^6.7.5",
     "@typescript-eslint/parser": "^6.7.5",
     "babel-eslint": "^10.1.0",
@@ -83,7 +83,7 @@
     "qunit": "^2.19.4",
     "qunit-dom": "^2.0.0",
     "release-it": "^15.11.0",
-    "sinon": "^16.1.0",
+    "sinon": "^17.0.1",
     "tracked-built-ins": "^3.1.1",
     "typescript": "^5.2.2",
     "webpack": "^5.89.0"
