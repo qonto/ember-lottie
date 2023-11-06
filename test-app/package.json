@@ -84,7 +84,7 @@
     "qunit-dom": "^2.0.0",
     "release-it": "^15.11.0",
     "sinon": "^17.0.1",
-    "tracked-built-ins": "^3.1.1",
+    "tracked-built-ins": "^3.3.0",
     "typescript": "^5.2.2",
     "webpack": "^5.89.0"
   },
