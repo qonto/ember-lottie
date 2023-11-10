@@ -107,6 +107,32 @@ module('Integration | Component | lottie', function (hooks) {
     assert.dom('[data-test-autoplay=false]').exists();
   });
 
+  test('it defaults to addListener and removeListener for browsers where MediaQueryList does not inherit form EventTarget', async function (this: TestContext, assert) {
+    const addListener = sinon.spy();
+    const removeListener = sinon.spy();
+    window.matchMedia = (): MediaQueryList => {
+      return {
+        addListener,
+        removeListener,
+        addEventListener: undefined,
+        removeEventListener: undefined,
+        matches: true,
+      } as unknown as MediaQueryList;
+    };
+
+    await render<TestContext>(hbs`
+      <Lottie
+        @path="/data.json"
+      />
+    `);
+
+    find('svg');
+    assert.true(addListener.calledOnce);
+
+    await clearRender();
+    assert.true(removeListener.calledOnce);
+  });
+
   test('it does not autoplay the animation when autoplay is false', async function (this: TestContext, assert) {
     window.matchMedia = (): MediaQueryList => {
       return {
