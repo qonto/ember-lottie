@@ -113,10 +113,15 @@ export default class LottieComponent extends Component<LottieSignature> {
     const speed = Ember.testing ? 0 : this.args.speed || 1;
     this.animation.setSpeed(speed);
 
-    this.mediaQuery?.addEventListener(
-      'change',
-      this.handleReducedMotionPreferenceChange,
-    );
+    if (this.mediaQuery?.addEventListener) {
+      this.mediaQuery.addEventListener(
+        'change',
+        this.handleReducedMotionPreferenceChange,
+      );
+    } else if (this.mediaQuery?.addListener) {
+      // For backward compatibility with older browsers, e.g. Safari 13
+      this.mediaQuery.addListener(this.handleReducedMotionPreferenceChange);
+    }
   }
 
   @action
@@ -130,10 +135,15 @@ export default class LottieComponent extends Component<LottieSignature> {
   willDestroy(): void {
     super.willDestroy();
 
-    this.mediaQuery?.removeEventListener(
-      'change',
-      this.handleReducedMotionPreferenceChange,
-    );
+    if (this.mediaQuery?.removeEventListener) {
+      this.mediaQuery.removeEventListener(
+        'change',
+        this.handleReducedMotionPreferenceChange,
+      );
+    } else if (this.mediaQuery?.removeListener) {
+      // For backward compatibility with older browsers, e.g. Safari 13
+      this.mediaQuery.removeListener(this.handleReducedMotionPreferenceChange);
+    }
 
     if (this.animation) {
       this.animation.destroy();
