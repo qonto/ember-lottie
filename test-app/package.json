@@ -81,7 +81,7 @@
     "loader.js": "^4.7.0",
     "prettier": "^3.0.3",
     "qunit": "^2.19.4",
-    "qunit-dom": "^2.0.0",
+    "qunit-dom": "^3.0.0",
     "release-it": "^15.11.0",
     "sinon": "^17.0.1",
     "tracked-built-ins": "^3.3.0",
