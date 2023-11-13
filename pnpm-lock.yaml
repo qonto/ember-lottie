@@ -145,8 +145,8 @@ importers:
         specifier: ^2.0.0
         version: 2.0.0
       '@ember/render-modifiers':
-        specifier: ^2.0.4
-        version: 2.0.4(@babel/core@7.23.0)(@glint/template@1.2.1)(ember-source@5.3.0)
+        specifier: ^2.1.0
+        version: 2.1.0(@babel/core@7.23.0)(@glint/template@1.2.1)(ember-source@5.3.0)
       '@ember/string':
         specifier: ^3.1.1
         version: 3.1.1
@@ -1626,19 +1626,23 @@ packages:
       - supports-color
     dev: true
 
-  /@ember/render-modifiers@2.0.4(@babel/core@7.23.0)(@glint/template@1.2.1)(ember-source@5.3.0):
-    resolution: {integrity: sha512-Zh/fo5VUmVzYHkHVvzWVjJ1RjFUxA2jH0zCp2+DQa80Bf3DUXauiEByxU22UkN4LFT55DBFttC0xCQSJG3WTsg==}
+  /@ember/render-modifiers@2.1.0(@babel/core@7.23.0)(@glint/template@1.2.1)(ember-source@5.3.0):
+    resolution: {integrity: sha512-LruhfoDv2itpk0fA0IC76Sxjcnq/7BC6txpQo40hOko8Dn6OxwQfxkPIbZGV0Cz7df+iX+VJrcYzNIvlc3w2EQ==}
     engines: {node: 12.* || 14.* || >= 16}
     peerDependencies:
-      ember-source: ^3.8 || 4
+      '@glint/template': ^1.0.2
+      ember-source: ^3.8 || ^4.0.0 || ^5.0.0
+    peerDependenciesMeta:
+      '@glint/template':
+        optional: true
     dependencies:
       '@embroider/macros': 1.13.2(@glint/template@1.2.1)
+      '@glint/template': 1.2.1
       ember-cli-babel: 7.26.11
       ember-modifier-manager-polyfill: 1.2.0(@babel/core@7.23.0)
       ember-source: 5.3.0(@babel/core@7.23.0)(@glimmer/component@1.1.2)(@glint/template@1.2.1)(rsvp@4.8.5)(webpack@5.89.0)
     transitivePeerDependencies:
       - '@babel/core'
-      - '@glint/template'
       - supports-color
     dev: true
 
