@@ -181,8 +181,8 @@ importers:
         specifier: ^3.0.2
         version: 3.0.2
       '@types/htmlbars-inline-precompile':
-        specifier: ^3.0.0
-        version: 3.0.0
+        specifier: ^3.0.2
+        version: 3.0.2
       '@types/qunit':
         specifier: ^2.19.4
         version: 2.19.4
@@ -2817,8 +2817,8 @@ packages:
       '@types/minimatch': 5.1.2
       '@types/node': 20.8.8
 
-  /@types/htmlbars-inline-precompile@3.0.0:
-    resolution: {integrity: sha512-n1YwM/Q937KmS9W4Ytran71nzhhcT2FDQI00eRGBNUyeErLZspBdDBewEe1F8tcRlUdsCVo2AZBLJsRjEceTRg==}
+  /@types/htmlbars-inline-precompile@3.0.2:
+    resolution: {integrity: sha512-tLt8u+8fJIPrv7kJBSOMiOuTBYMBH7fVCu8zaxnGwZO/tvrfpgGTOwkmbjHSxnoGBeEfbAq1sbbGJDXcD1eyyw==}
     dev: true
 
   /@types/http-cache-semantics@4.0.3:
