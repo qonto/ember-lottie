@@ -14,7 +14,7 @@ Render [lottie](https://github.com/airbnb/lottie-web) after effects animations i
 
 - Ember.js v3.28 or above
 - Ember CLI v3.28 or above
-- Node.js v14 or above
+- Node.js v18 or above
 - TypeScript v5 or above
 
 ## Installation
