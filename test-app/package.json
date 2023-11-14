@@ -82,7 +82,7 @@
     "prettier": "^3.0.3",
     "qunit": "^2.19.4",
     "qunit-dom": "^3.0.0",
-    "release-it": "^15.11.0",
+    "release-it": "^16.2.1",
     "sinon": "^17.0.1",
     "tracked-built-ins": "^3.3.0",
     "typescript": "^5.2.2",
