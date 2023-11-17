@@ -1,4 +1,36 @@
 
+
+## v1.0.0 (2023-11-17)
+
+#### :boom: Breaking Change
+* [#285](https://github.com/qonto/ember-lottie/pull/285) feat: drop node v16 ([@vscav](https://github.com/vscav))
+* [#253](https://github.com/qonto/ember-lottie/pull/253) ci: add TypeScript compatibility check jobs ([@vscav](https://github.com/vscav))
+
+#### :rocket: Enhancement
+* [#274](https://github.com/qonto/ember-lottie/pull/274) fix(lottie.ts): passing credentials include param to fetch request ([@mrloop](https://github.com/mrloop))
+* [#238](https://github.com/qonto/ember-lottie/pull/238) feat: use official ember-source TypeScript types public preview in addon package ([@vscav](https://github.com/vscav))
+* [#237](https://github.com/qonto/ember-lottie/pull/237) feat: use official ember-source TypeScript types public preview in test-app ([@nicolasgasco](https://github.com/nicolasgasco))
+
+#### :bug: Bug Fix
+* [#273](https://github.com/qonto/ember-lottie/pull/273) Add backward compatibility with MediaQueryList.addEventListener in older browsers ([@nicolasgasco](https://github.com/nicolasgasco))
+
+#### :memo: Documentation
+* [#252](https://github.com/qonto/ember-lottie/pull/252) fix(docs): remove unused columns in API reference table ([@vscav](https://github.com/vscav))
+* [#204](https://github.com/qonto/ember-lottie/pull/204) fix: typo in README ([@vscav](https://github.com/vscav))
+
+#### :house: Internal
+* [#260](https://github.com/qonto/ember-lottie/pull/260) chore: install and use @qonto/eslint-config-typescript@1.0.0-rc.0 ([@vscav](https://github.com/vscav))
+* [#241](https://github.com/qonto/ember-lottie/pull/241) feat(ts): setup and use Glint in test-app package ([@vscav](https://github.com/vscav))
+* [#240](https://github.com/qonto/ember-lottie/pull/240) chore(lint): add specific set of rules for TypeScript linting and run lint with --fix option ([@vscav](https://github.com/vscav))
+* [#203](https://github.com/qonto/ember-lottie/pull/203) fix: use correct syntax for no-lockfile option ([@nicolasgasco](https://github.com/nicolasgasco))
+* [#202](https://github.com/qonto/ember-lottie/pull/202) chore: update action-setup-pnpm to v3 ([@nicolasgasco](https://github.com/nicolasgasco))
+
+#### Committers: 3
+- Ewan McDougall ([@mrloop](https://github.com/mrloop))
+- Nicolas Gasco ([@nicolasgasco](https://github.com/nicolasgasco))
+- Vincent Scavinner ([@vscav](https://github.com/vscav))
+
+
 ## v0.6.1 (2023-09-07)
 
 #### :rocket: Enhancement
