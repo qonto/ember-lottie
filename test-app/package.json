@@ -43,7 +43,7 @@
     "@types/htmlbars-inline-precompile": "^3.0.2",
     "@types/qunit": "^2.19.8",
     "@types/rsvp": "^4.0.6",
-    "@types/sinon": "^17.0.0",
+    "@types/sinon": "^17.0.1",
     "@typescript-eslint/eslint-plugin": "^6.10.0",
     "@typescript-eslint/parser": "^6.7.5",
     "babel-eslint": "^10.1.0",
