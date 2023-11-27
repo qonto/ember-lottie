@@ -27,8 +27,8 @@ importers:
   ember-lottie:
     dependencies:
       '@ember/test-waiters':
-        specifier: ^3.0.2
-        version: 3.0.2
+        specifier: ^3.1.0
+        version: 3.1.0
       '@embroider/addon-shim':
         specifier: ^1.8.7
         version: 1.8.7
@@ -1717,7 +1717,7 @@ packages:
     peerDependencies:
       ember-source: ^4.0.0 || ^5.0.0
     dependencies:
-      '@ember/test-waiters': 3.0.2
+      '@ember/test-waiters': 3.1.0
       '@embroider/macros': 1.13.2(@glint/template@1.2.1)
       '@simple-dom/interface': 1.4.0
       broccoli-debug: 0.6.5
@@ -1732,8 +1732,8 @@ packages:
       - webpack
     dev: true
 
-  /@ember/test-waiters@3.0.2:
-    resolution: {integrity: sha512-H8Q3Xy9rlqhDKnQpwt2pzAYDouww4TZIGSI1pZJhM7mQIGufQKuB0ijzn/yugA6Z+bNdjYp1HioP8Y4hn2zazQ==}
+  /@ember/test-waiters@3.1.0:
+    resolution: {integrity: sha512-bb9h95ktG2wKY9+ja1sdsFBdOms2lB19VWs8wmNpzgHv1NCetonBoV5jHBV4DHt0uS1tg9z66cZqhUVlYs96KQ==}
     engines: {node: 10.* || 12.* || >= 14.*}
     dependencies:
       calculate-cache-key-for-tree: 2.0.0
