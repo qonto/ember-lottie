@@ -187,8 +187,8 @@ importers:
         specifier: ^2.19.8
         version: 2.19.8
       '@types/rsvp':
-        specifier: ^4.0.6
-        version: 4.0.6
+        specifier: ^4.0.8
+        version: 4.0.8
       '@types/sinon':
         specifier: ^17.0.1
         version: 17.0.1
@@ -2955,8 +2955,8 @@ packages:
       '@types/glob': 8.1.0
       '@types/node': 20.8.8
 
-  /@types/rsvp@4.0.6:
-    resolution: {integrity: sha512-2CgsI0j74ULhrZrqcMwZ7nSvcyX767KaJDefxCnrNSp1D4MuLX8qxOPHwHz7/5b2FC94ILh3Db6du6QAvpc+Qw==}
+  /@types/rsvp@4.0.8:
+    resolution: {integrity: sha512-OraQXMlBrD3nll0VuEKENY3IoR4N3eDIqElVWo5dSheMveYYMDSIUMbtcI7wOGWyUilLwfaOx9VF8U8LdrHXkg==}
     dev: true
 
   /@types/semver@7.5.4:
