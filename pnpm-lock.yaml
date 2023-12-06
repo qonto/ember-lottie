@@ -16,10 +16,10 @@ importers:
         version: 18.4.3
       '@release-it-plugins/lerna-changelog':
         specifier: ^6.0.0
-        version: 6.0.0(release-it@16.2.1)
+        version: 6.0.0(release-it@16.3.0)
       '@release-it-plugins/workspaces':
         specifier: ^4.0.0
-        version: 4.0.0(release-it@16.2.1)
+        version: 4.0.0(release-it@16.3.0)
       concurrently:
         specifier: ^8.2.2
         version: 8.2.2
@@ -30,8 +30,8 @@ importers:
         specifier: ^3.1.0
         version: 3.1.0
       release-it:
-        specifier: ^16.2.1
-        version: 16.2.1(typescript@5.3.2)
+        specifier: ^16.3.0
+        version: 16.3.0(typescript@5.3.2)
 
   ember-lottie:
     dependencies:
@@ -185,7 +185,7 @@ importers:
         version: 1.0.0-rc.0(eslint@8.55.0)(typescript@5.3.2)
       '@release-it-plugins/lerna-changelog':
         specifier: ^6.0.0
-        version: 6.0.0(release-it@16.2.1)
+        version: 6.0.0(release-it@16.3.0)
       '@tsconfig/ember':
         specifier: ^3.0.2
         version: 3.0.2
@@ -316,8 +316,8 @@ importers:
         specifier: ^3.0.0
         version: 3.0.0
       release-it:
-        specifier: ^16.2.1
-        version: 16.2.1(typescript@5.3.2)
+        specifier: ^16.3.0
+        version: 16.3.0(typescript@5.3.2)
       sinon:
         specifier: ^17.0.1
         version: 17.0.1
@@ -2690,7 +2690,7 @@ packages:
       - supports-color
     dev: true
 
-  /@release-it-plugins/lerna-changelog@6.0.0(release-it@16.2.1):
+  /@release-it-plugins/lerna-changelog@6.0.0(release-it@16.3.0):
     resolution: {integrity: sha512-/1xNLriHKKTdM+/LSQIng5V25gipw0brAXtWVQcOBR63NmW/Ftnd2IJpnM5WzFkOCcL9hoqc8rcIMMv1EOcaIg==}
     engines: {node: '>= 16'}
     peerDependencies:
@@ -2700,7 +2700,7 @@ packages:
       lerna-changelog: 2.2.0
       lodash.template: 4.5.0
       mdast-util-from-markdown: 1.3.1
-      release-it: 16.2.1(typescript@5.3.2)
+      release-it: 16.3.0(typescript@5.3.2)
       tmp: 0.2.1
       validate-peer-dependencies: 2.2.0
       which: 2.0.2
@@ -2709,7 +2709,7 @@ packages:
       - supports-color
     dev: true
 
-  /@release-it-plugins/workspaces@4.0.0(release-it@16.2.1):
+  /@release-it-plugins/workspaces@4.0.0(release-it@16.3.0):
     resolution: {integrity: sha512-79qsR770mvuQeTSMnOjrEJuJHQ4x1KyUkZjqCOQ/UxjK+igNYYDsLK26LpKTweeTjpbpmLYaOg6bl+28M5CO0A==}
     engines: {node: '>= 16'}
     peerDependencies:
@@ -2717,7 +2717,7 @@ packages:
     dependencies:
       detect-indent: 6.1.0
       detect-newline: 3.1.0
-      release-it: 16.2.1(typescript@5.3.2)
+      release-it: 16.3.0(typescript@5.3.2)
       semver: 7.5.4
       url-join: 4.0.1
       validate-peer-dependencies: 1.2.0
@@ -12142,8 +12142,8 @@ packages:
     dependencies:
       jsesc: 0.5.0
 
-  /release-it@16.2.1(typescript@5.3.2):
-    resolution: {integrity: sha512-+bHiKPqkpld+NaiW+K/2WsjaHgfPB00J6uk8a+g8QyuBtzfFoMVe+GKsfaDO5ztEHRrSg+7luoXzd8IfvPNPig==}
+  /release-it@16.3.0(typescript@5.3.2):
+    resolution: {integrity: sha512-CP+WwKbgEvXreq6Iz9po3BtcyELtTxrt5RXRGnazQ0eCphPxFZR29+8sEZRCsJq2IKvlwb5mFUbf92u426oQog==}
     engines: {node: '>=16'}
     hasBin: true
     dependencies:
