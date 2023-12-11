@@ -19,13 +19,13 @@ jobs:
         with:
           fetch-depth: 0
 
-      - uses: actions/setup-node@v4
-        name: Install node
+      - name: Install node
+        uses: actions/setup-node@v4
         with:
           node-version: 18
 
-      - uses: pnpm/action-setup@v2
-        name: Install pnpm
+      - name: Install pnpm
+        uses: pnpm/action-setup@v2
         with:
           version: 8.5.1
           run_install: false
@@ -37,8 +37,8 @@ jobs:
           echo "COMMITLINT_CONFIG_CONVENTIONAL_VERSION=$(pnpm show @commitlint/config-conventional version)" >> $GITHUB_ENV
           echo "STORE_PATH=$(pnpm store path --silent)" >> $GITHUB_ENV
 
-      - uses: actions/cache@v3
-        name: Setup pnpm cache
+      - name: Setup pnpm cache
+        uses: actions/cache@v3
         with:
           path: ${{ env.STORE_PATH }}
           key: ${{ runner.os }}-pnpm-store-${{ env.COMMITLINT_CLI_VERSION }}-${{ env.COMMITLINT_CONFIG_CONVENTIONAL_VERSION }}
