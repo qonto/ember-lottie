@@ -217,8 +217,8 @@ importers:
         specifier: ^8.2.2
         version: 8.2.2
       ember-auto-import:
-        specifier: ^2.6.3
-        version: 2.6.3(@glint/template@1.2.1)(webpack@5.89.0)
+        specifier: ^2.7.0
+        version: 2.7.0(@glint/template@1.2.1)(webpack@5.89.0)
       ember-cli:
         specifier: ~4.12.2
         version: 4.12.2
@@ -1906,7 +1906,7 @@ packages:
       '@simple-dom/interface': 1.4.0
       broccoli-debug: 0.6.5
       broccoli-funnel: 3.0.8
-      ember-auto-import: 2.6.3(@glint/template@1.2.1)(webpack@5.89.0)
+      ember-auto-import: 2.7.0(@glint/template@1.2.1)(webpack@5.89.0)
       ember-cli-babel: 7.26.11
       ember-cli-htmlbars: 6.3.0
       ember-source: 5.3.0(@babel/core@7.23.3)(@glimmer/component@1.1.2)(@glint/template@1.2.1)(rsvp@4.8.5)(webpack@5.89.0)
@@ -2016,6 +2016,7 @@ packages:
       semver: 7.5.4
     transitivePeerDependencies:
       - supports-color
+    dev: true
 
   /@embroider/macros@1.13.3(@glint/template@1.2.1):
     resolution: {integrity: sha512-JUC1aHRLIN2LNy1l+gz7gWkw9JmnsE20GL3LduCzNvCAnEQpMTJhW5BUbEWqdCnAWBPte/M2ofckqBXyTZioTQ==}
@@ -2037,7 +2038,6 @@ packages:
       semver: 7.5.4
     transitivePeerDependencies:
       - supports-color
-    dev: true
 
   /@embroider/shared-internals@2.5.0:
     resolution: {integrity: sha512-7qzrb7GVIyNqeY0umxoeIvjDC+ay1b+wb2yCVuYTUYrFfLAkLEy9FNI3iWCi3RdQ9OFjgcAxAnwsAiPIMZZ3pQ==}
@@ -2054,6 +2054,7 @@ packages:
       typescript-memoize: 1.1.1
     transitivePeerDependencies:
       - supports-color
+    dev: true
 
   /@embroider/shared-internals@2.5.1:
     resolution: {integrity: sha512-b+TWDBisH1p6HeTbJIO8pgu1WzfTP0ZSAlZBqjXwOyrS0ZxP1qNYRrEX+IxyzIibEFjXBxeLakiejz3DJvZX5A==}
@@ -6255,7 +6256,7 @@ packages:
       '@babel/plugin-proposal-class-properties': 7.18.6(@babel/core@7.23.3)
       '@babel/plugin-proposal-decorators': 7.23.6(@babel/core@7.23.3)
       '@babel/preset-env': 7.23.2(@babel/core@7.23.3)
-      '@embroider/macros': 1.13.2(@glint/template@1.2.1)
+      '@embroider/macros': 1.13.3(@glint/template@1.2.1)
       '@embroider/shared-internals': 2.5.1
       babel-loader: 8.3.0(@babel/core@7.23.3)(webpack@5.89.0)
       babel-plugin-ember-modules-api-polyfill: 3.5.0
@@ -6286,6 +6287,50 @@ packages:
       - '@glint/template'
       - supports-color
       - webpack
+
+  /ember-auto-import@2.7.0(@glint/template@1.2.1)(webpack@5.89.0):
+    resolution: {integrity: sha512-cBEBB6IRRmlCVfyaRmDCfLrywm2HibTosJzIKv4BWF1p2ZokUhXBJjMRwuaG3tbLMV8rmJdLWnSKm8CodsdmQA==}
+    engines: {node: 12.* || 14.* || >= 16}
+    dependencies:
+      '@babel/core': 7.23.3
+      '@babel/plugin-proposal-class-properties': 7.18.6(@babel/core@7.23.3)
+      '@babel/plugin-proposal-decorators': 7.23.3(@babel/core@7.23.3)
+      '@babel/plugin-proposal-private-methods': 7.18.6(@babel/core@7.23.3)
+      '@babel/plugin-transform-class-static-block': 7.22.11(@babel/core@7.23.3)
+      '@babel/preset-env': 7.23.2(@babel/core@7.23.3)
+      '@embroider/macros': 1.13.3(@glint/template@1.2.1)
+      '@embroider/shared-internals': 2.5.1
+      babel-loader: 8.3.0(@babel/core@7.23.3)(webpack@5.89.0)
+      babel-plugin-ember-modules-api-polyfill: 3.5.0
+      babel-plugin-ember-template-compilation: 2.2.0
+      babel-plugin-htmlbars-inline-precompile: 5.3.1
+      babel-plugin-syntax-dynamic-import: 6.18.0
+      broccoli-debug: 0.6.5
+      broccoli-funnel: 3.0.8
+      broccoli-merge-trees: 4.2.0
+      broccoli-plugin: 4.0.7
+      broccoli-source: 3.0.1
+      css-loader: 5.2.7(webpack@5.89.0)
+      debug: 4.3.4
+      fs-extra: 10.1.0
+      fs-tree-diff: 2.0.1
+      handlebars: 4.7.8
+      js-string-escape: 1.0.1
+      lodash: 4.17.21
+      mini-css-extract-plugin: 2.7.6(webpack@5.89.0)
+      minimatch: 3.1.2
+      parse5: 6.0.1
+      resolve: 1.22.8
+      resolve-package-path: 4.0.3
+      semver: 7.5.4
+      style-loader: 2.0.0(webpack@5.89.0)
+      typescript-memoize: 1.1.1
+      walk-sync: 3.0.0
+    transitivePeerDependencies:
+      - '@glint/template'
+      - supports-color
+      - webpack
+    dev: true
 
   /ember-cli-app-version@6.0.1(ember-source@5.3.0):
     resolution: {integrity: sha512-XA1FwkWA5QytmWF0jcJqEr3jcZoiCl9Fb33TZgOVfClL7Voxe+/RwzISEprBRQgbf7j8z1xf8/RJCKfclUy3rQ==}
