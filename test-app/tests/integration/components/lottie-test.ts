@@ -252,10 +252,6 @@ module('Integration | Component | lottie', function (hooks) {
       />
     `);
     const fetchArgs = fetch.getCall(0).args;
-    assert.deepEqual(
-      fetchArgs,
-      ['/data.json', undefined],
-      'fetch arguments match',
-    );
+    assert.deepEqual(fetchArgs, ['/data.json'], 'fetch arguments match');
   });
 });
