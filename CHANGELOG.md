@@ -1,5 +1,13 @@
 
 
+## [1.0.1](https://github.com/qonto/ember-lottie/compare/v1.0.0...v1.0.1) (2023-12-19)
+
+
+### Bug Fixes
+
+* dont pass undefined options to fetch ([78e36d4](https://github.com/qonto/ember-lottie/commit/78e36d44e152679c6a5d8d0974576995243eaf20))
+* update broken lockfile ([786b705](https://github.com/qonto/ember-lottie/commit/786b7057320ef398566edf63933272a412ad907c))
+
 ## v1.0.0 (2023-11-17)
 
 #### :boom: Breaking Change
