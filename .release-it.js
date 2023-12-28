@@ -10,10 +10,10 @@ module.exports = {
   },
   git: {
     tagName: "v${version}",
+    commitMessage: "chore: release v${version}",
   },
   github: {
     release: true,
     tokenRef: "GITHUB_AUTH",
   },
-  npm: false,
 };
