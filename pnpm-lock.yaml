@@ -178,7 +178,7 @@ importers:
         specifier: 1.2.1
         version: 1.2.1(@glimmer/component@1.1.2)(@glint/template@1.2.1)(ember-cli-htmlbars@6.3.0)(ember-modifier@4.1.0)
       '@qonto/ember-lottie':
-        specifier: 1.0.1
+        specifier: 1.1.0
         version: link:../ember-lottie
       '@qonto/eslint-config-typescript':
         specifier: 1.0.0-rc.0
