@@ -97,8 +97,8 @@ importers:
         specifier: 6.0.4
         version: 6.0.4(@babel/core@7.23.6)(rollup@4.8.0)
       '@tsconfig/ember':
-        specifier: 3.0.2
-        version: 3.0.2
+        specifier: 3.0.3
+        version: 3.0.3
       '@typescript-eslint/eslint-plugin':
         specifier: 6.14.0
         version: 6.14.0(@typescript-eslint/parser@6.13.2)(eslint@8.56.0)(typescript@5.3.3)
@@ -178,7 +178,7 @@ importers:
         specifier: 1.2.1
         version: 1.2.1(@glimmer/component@1.1.2)(@glint/template@1.2.1)(ember-cli-htmlbars@6.3.0)(ember-modifier@4.1.0)
       '@qonto/ember-lottie':
-        specifier: 1.1.0
+        specifier: 1.1.1
         version: link:../ember-lottie
       '@qonto/eslint-config-typescript':
         specifier: 1.0.0-rc.0
@@ -187,8 +187,8 @@ importers:
         specifier: ^6.0.0
         version: 6.0.0(release-it@16.3.0)
       '@tsconfig/ember':
-        specifier: ^3.0.2
-        version: 3.0.2
+        specifier: ^3.0.3
+        version: 3.0.3
       '@types/htmlbars-inline-precompile':
         specifier: ^3.0.2
         version: 3.0.2
@@ -3032,8 +3032,8 @@ packages:
     resolution: {integrity: sha512-C5Mc6rdnsaJDjO3UpGW/CQTHtCKaYlScZTly4JIu97Jxo/odCiH0ITnDXSJPTOrEKk/ycSZ0AOgTmkDtkOsvIA==}
     dev: true
 
-  /@tsconfig/ember@3.0.2:
-    resolution: {integrity: sha512-Whab2JuEA9r1RLke13tKWO7F95C7l3ivwVhxC37v98vOtFOmDA2BisY/6Fnhclmyydc5vOuVPwN3hi8UTboahw==}
+  /@tsconfig/ember@3.0.3:
+    resolution: {integrity: sha512-StVVkcg/VxA+eDzBcTQAcnmmcmg1OxaV41OqFYluqVHpUX28TOD91DGg58n2AMU9ia27zeBBeVQiLsfmzuIV7w==}
     dev: true
 
   /@types/acorn@4.0.6:
