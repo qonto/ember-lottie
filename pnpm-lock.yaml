@@ -1,9 +1,5 @@
 lockfileVersion: '6.0'
 
-settings:
-  autoInstallPeers: true
-  excludeLinksFromLockfile: false
-
 importers:
 
   .:
@@ -178,7 +174,7 @@ importers:
         specifier: 1.2.1
         version: 1.2.1(@glimmer/component@1.1.2)(@glint/template@1.2.1)(ember-cli-htmlbars@6.3.0)(ember-modifier@4.1.0)
       '@qonto/ember-lottie':
-        specifier: 1.1.1
+        specifier: 1.1.2
         version: link:../ember-lottie
       '@qonto/eslint-config-typescript':
         specifier: 1.0.0-rc.0
@@ -14984,3 +14980,7 @@ packages:
     resolution: {integrity: sha512-9bnSc/HEW2uRy67wc+T8UwauLuPJVn28jb+GtJY16iiKWyvmYJRXVT4UamsAEGQfPohgr2q4Tq0sQbQlxTfi1g==}
     engines: {node: '>=12.20'}
     dev: true
+
+settings:
+  autoInstallPeers: true
+  excludeLinksFromLockfile: false

@@ -1,5 +1,12 @@
 
 
+## [1.1.2](https://github.com/qonto/ember-lottie/compare/v1.1.1...v1.1.2) (2023-12-29)
+
+
+### Bug Fixes
+
+* fix an issue on release where lockfile was not getting updated ([97b428e](https://github.com/qonto/ember-lottie/commit/97b428e89b28971166ebf213a38da7ddf96963fa))
+
 ## [1.1.1](https://github.com/qonto/ember-lottie/compare/v1.1.0...v1.1.1) (2023-12-29)
 
 ## [1.1.0](https://github.com/qonto/ember-lottie/compare/v1.0.1...v1.1.0) (2023-12-28)
