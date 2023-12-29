@@ -17,4 +17,7 @@ module.exports = {
     tokenRef: "GITHUB_AUTH",
   },
   npm: false,
+  hooks: {
+    "after:bump": "pnpm i",
+  },
 };
