@@ -17,6 +17,6 @@ module.exports = {
   },
   npm: false,
   hooks: {
-    "after:bump": "pnpm i",
+    "after:bump": "pnpm i --frozen-lockfile=false",
   },
 };
