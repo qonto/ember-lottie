@@ -97,8 +97,8 @@ importers:
         specifier: 6.0.4
         version: 6.0.4(@babel/core@7.23.9)(rollup@4.10.0)
       '@tsconfig/ember':
-        specifier: 3.0.3
-        version: 3.0.3
+        specifier: 3.0.5
+        version: 3.0.5
       '@typescript-eslint/eslint-plugin':
         specifier: 6.21.0
         version: 6.21.0(@typescript-eslint/parser@6.21.0)(eslint@8.56.0)(typescript@5.3.3)
@@ -187,8 +187,8 @@ importers:
         specifier: ^6.1.0
         version: 6.1.0(release-it@16.3.0)
       '@tsconfig/ember':
-        specifier: ^3.0.3
-        version: 3.0.3
+        specifier: ^3.0.5
+        version: 3.0.5
       '@types/htmlbars-inline-precompile':
         specifier: ^3.0.3
         version: 3.0.3
@@ -3116,8 +3116,8 @@ packages:
     resolution: {integrity: sha512-C5Mc6rdnsaJDjO3UpGW/CQTHtCKaYlScZTly4JIu97Jxo/odCiH0ITnDXSJPTOrEKk/ycSZ0AOgTmkDtkOsvIA==}
     dev: true
 
-  /@tsconfig/ember@3.0.3:
-    resolution: {integrity: sha512-StVVkcg/VxA+eDzBcTQAcnmmcmg1OxaV41OqFYluqVHpUX28TOD91DGg58n2AMU9ia27zeBBeVQiLsfmzuIV7w==}
+  /@tsconfig/ember@3.0.5:
+    resolution: {integrity: sha512-5fccd/42M+ejFxAqA8uN+ZlYPhIwZFM2f3xpkmvdyQVrgBkJnsWqnCEXCBfhi6d+fBVDNnRNWiUwczJyFzmK1Q==}
     dev: true
 
   /@types/acorn@4.0.6:
