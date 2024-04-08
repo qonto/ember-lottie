@@ -44,7 +44,7 @@
     "lottie-web": "^5.12.2"
   },
   "devDependencies": {
-    "@babel/core": "7.23.9",
+    "@babel/core": "7.24.3",
     "@babel/plugin-proposal-async-generator-functions": "7.20.7",
     "@babel/plugin-proposal-class-properties": "7.18.6",
     "@babel/plugin-proposal-decorators": "7.24.0",
