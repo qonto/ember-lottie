@@ -71,6 +71,7 @@ export default class LottieComponent extends Component<LottieSignature> {
 
     if (this.args.animationData) {
       animationData = this.args.animationData;
+      waiter.endAsync(token);
     } else if (this.args.path) {
       try {
         const response = await (this.args.fetchOptions

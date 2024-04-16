@@ -3,6 +3,7 @@ import { setupRenderingTest } from 'ember-qunit';
 import { clearRender, find, render } from '@ember/test-helpers';
 import { hbs } from 'ember-cli-htmlbars';
 import type { TestContext as TestContextBase } from '@ember/test-helpers';
+import exampleData from './fixtures/data';
 
 import window from 'ember-window-mock';
 import { setupWindowMock } from 'ember-window-mock/test-support';
@@ -11,6 +12,7 @@ import * as sinon from 'sinon';
 interface TestContext extends TestContextBase {
   onDataReady: () => void;
   fetchOptions: RequestInit;
+  exampleData?: Record<string, unknown>;
 }
 
 const NOOP = (): void => {};
@@ -40,6 +42,20 @@ module('Integration | Component | lottie', function (hooks) {
       />
     `);
 
+    find('svg');
+    assert.verifySteps(['data ready called']);
+  });
+
+  test('it renders when using @animationData', async function (this: TestContext, assert) {
+    this.onDataReady = (): void => assert.step('data ready called');
+    this.exampleData = exampleData;
+
+    await render<TestContext>(hbs`
+      <Lottie
+        @animationData={{this.exampleData}}
+        @onDataReady={{this.onDataReady}}
+      />
+    `);
     find('svg');
     assert.verifySteps(['data ready called']);
   });
