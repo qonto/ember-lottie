@@ -1,5 +1,12 @@
 
 
+## [1.1.3](https://github.com/qonto/ember-lottie/compare/v1.1.2...v1.1.3) (2024-04-23)
+
+
+### Bug Fixes
+
+* end test waiter when using `[@animation](https://github.com/animation)Data` arg ([b23adf7](https://github.com/qonto/ember-lottie/commit/b23adf7469e5ff53a07efb5714144132b1420ab2))
+
 ## [1.1.2](https://github.com/qonto/ember-lottie/compare/v1.1.1...v1.1.2) (2023-12-29)
 
 
