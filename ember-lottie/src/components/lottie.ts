@@ -1,7 +1,8 @@
 import Component from '@glimmer/component';
 import { action } from '@ember/object';
 import { buildWaiter } from '@ember/test-waiters';
-import Ember from 'ember';
+import { macroCondition, isTesting } from '@embroider/macros';
+import { modifier } from 'ember-modifier';
 
 import type { AnimationItem, LottiePlayer } from 'lottie-web';
 import window from 'ember-window-mock';
@@ -51,6 +52,13 @@ export interface LottieSignature {
 }
 
 export default class LottieComponent extends Component<LottieSignature> {
+  // Runs `animate` once, when the element is first inserted into the DOM.
+  // Replaces the (deprecated) `{{did-insert}}` modifier from
+  // `@ember/render-modifiers`.
+  animateOnInsert = modifier((element: HTMLElement) => {
+    void this.animate(element);
+  });
+
   private animation?: AnimationItem;
   private mediaQuery = window.matchMedia?.('(prefers-reduced-motion: reduce)');
 
@@ -114,7 +122,14 @@ export default class LottieComponent extends Component<LottieSignature> {
       },
     });
 
-    const speed = Ember.testing ? 0 : this.args.speed || 1;
+    let speed;
+
+    if (macroCondition(isTesting())) {
+      speed = 0;
+    } else {
+      speed = this.args.speed || 1;
+    }
+
     this.animation.setSpeed(speed);
 
     if (this.mediaQuery?.addEventListener) {

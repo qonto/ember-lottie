@@ -1,3 +1,6 @@
 packages:
   - 'ember-lottie'
   - 'test-app'
+allowBuilds:
+  core-js: false
+  lefthook: true

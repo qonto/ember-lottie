@@ -32,13 +32,13 @@
     "release-it": "^17.6.0"
   },
   "engines": {
-    "node": ">= 18"
+    "node": ">= 22"
   },
   "publishConfig": {
     "registry": "https://registry.npmjs.org"
   },
   "dependencies": {
     "@types/node": "22.5.5",
-    "typescript": "5.6.2"
+    "typescript": "6.0.3"
   }
 }
