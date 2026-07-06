@@ -22,14 +22,14 @@
     "test": "pnpm --filter '*' test"
   },
   "devDependencies": {
-    "@commitlint/cli": "^19.5.0",
-    "@commitlint/config-conventional": "^19.5.0",
-    "@release-it-plugins/workspaces": "^4.2.0",
-    "@release-it/conventional-changelog": "^8.0.2",
+    "@commitlint/cli": "^21.2.0",
+    "@commitlint/config-conventional": "^21.2.0",
+    "@release-it-plugins/workspaces": "^6.0.0",
+    "@release-it/conventional-changelog": "^11.0.1",
     "concurrently": "^9.0.1",
-    "lefthook": "^1.7.15",
+    "lefthook": "^2.1.9",
     "prettier": "^3.3.3",
-    "release-it": "^17.6.0"
+    "release-it": "^19.2.4"
   },
   "engines": {
     "node": ">= 22"
@@ -39,7 +39,7 @@
     "registry": "https://registry.npmjs.org"
   },
   "dependencies": {
-    "@types/node": "22.5.5",
+    "@types/node": "22.20.0",
     "typescript": "6.0.3"
   }
 }
