@@ -3,47 +3,31 @@
 const getChannelURL = require('ember-source-channel-url');
 const { embroiderSafe, embroiderOptimized } = require('@embroider/test-setup');
 
-// Needed for ember-source < 4.8, when preview types were first shipped
-const emberTypesPackages = {
-  '@types/ember__application': '^4.0.8',
-  '@types/ember__routing': '^4.0.16',
-};
-
 module.exports = async function () {
   return {
     usePnpm: true,
     scenarios: [
       {
-        name: 'ember-lts-3.28',
+        name: 'ember-lts-5.12',
         npm: {
           devDependencies: {
-            'ember-source': '~3.28.0',
-            ...emberTypesPackages,
+            'ember-source': '~5.12.0',
           },
         },
       },
       {
-        name: 'ember-lts-4.4',
+        name: 'ember-lts-6.8',
         npm: {
           devDependencies: {
-            'ember-source': '~4.4.0',
-            ...emberTypesPackages,
+            'ember-source': '~6.8.0',
           },
         },
       },
       {
-        name: 'ember-lts-4.8',
+        name: 'ember-lts-6.12',
         npm: {
           devDependencies: {
-            'ember-source': '~4.8.0',
-          },
-        },
-      },
-      {
-        name: 'ember-lts-4.12',
-        npm: {
-          devDependencies: {
-            'ember-source': '~4.12.0',
+            'ember-source': '~6.12.0',
           },
         },
       },
@@ -71,27 +55,24 @@ module.exports = async function () {
           },
         },
       },
-      {
-        name: 'ember-classic',
-        env: {
-          EMBER_OPTIONAL_FEATURES: JSON.stringify({
-            'application-template-wrapper': true,
-            'default-async-observers': false,
-            'template-only-glimmer-components': false,
-          }),
-        },
+      embroiderSafe({
         npm: {
           devDependencies: {
-            'ember-source': '~3.28.0',
-            ...emberTypesPackages,
-          },
-          ember: {
-            edition: 'classic',
+            '@embroider/compat': '^4.1.21',
+            '@embroider/core': '^4.6.2',
+            '@embroider/webpack': '^4.1.2',
           },
         },
-      },
-      embroiderSafe(),
-      embroiderOptimized(),
+      }),
+      embroiderOptimized({
+        npm: {
+          devDependencies: {
+            '@embroider/compat': '^4.1.21',
+            '@embroider/core': '^4.6.2',
+            '@embroider/webpack': '^4.1.2',
+          },
+        },
+      }),
     ],
   };
 };
