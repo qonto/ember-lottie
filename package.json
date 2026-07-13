@@ -24,7 +24,7 @@
   "devDependencies": {
     "@commitlint/cli": "^19.5.0",
     "@commitlint/config-conventional": "^19.5.0",
-    "@release-it-plugins/workspaces": "^4.2.0",
+    "@release-it-plugins/workspaces": "^6.0.0",
     "@release-it/conventional-changelog": "^8.0.2",
     "concurrently": "^9.0.1",
     "lefthook": "^1.7.15",
